@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wells of Healing — Healing Rooms in Richmond, BC</title>
+  <meta name="description" content="Receive free in-person prayer for physical, mental, and emotional healing every Thursday from 7:00–8:30 PM in Richmond, BC. No appointment necessary.">
+  <meta property="og:title" content="Wells of Healing — Healing Rooms in Richmond, BC">
+  <meta property="og:description" content="Receive free in-person prayer for physical, mental, and emotional healing every Thursday from 7:00–8:30 PM in Richmond, BC. No appointment necessary.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --cream: #FDFBF7;
+      --cream-dark: #F7F3ED;
+      --gold: #C9A96E;
+      --gold-light: #D4BA88;
+      --water: #6A9BB5;
+      --water-light: #8BB5C9;
+      --deep-blue: #2C4A5A;
+      --charcoal: #2A2520;
+      --charcoal-light: #4A4540;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--charcoal);
+      background: var(--cream);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.4s, box-shadow 0.4s, padding 0.4s;
+    }
+
+    nav.scrolled {
+      background: rgba(253, 251, 247, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 1px 20px rgba(42, 37, 32, 0.06);
+      padding: 0.75rem 2rem;
+    }
+
+    .nav-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--deep-blue);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--charcoal-light);
+      text-decoration: none;
+      transition: color 0.3s;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links a:hover {
+      color: var(--deep-blue);
+    }
+
+    .nav-links .nav-cta {
+      background: var(--deep-blue);
+      color: var(--cream);
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .nav-links .nav-cta:hover {
+      background: var(--water);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 8rem 2rem 4rem;
+      position: relative;
+      background: var(--cream);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -20%;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(106, 155, 181, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      left: -15%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201, 169, 110, 0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .hero-label::before,
+    .hero-label::after {
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+      vertical-align: middle;
+      margin: 0 0.75rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 500;
+      color: var(--deep-blue);
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+      letter-spacing: -0.02em;
+      position: relative;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--water);
+    }
+
+    .hero-sub {
+      font-size: 1.2rem;
+      color: var(--charcoal-light);
+      max-width: 520px;
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--deep-blue);
+      color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 1rem 2.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 4px 20px rgba(44, 74, 90, 0.15);
+    }
+
+    .btn-primary:hover {
+      background: var(--water);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(106, 155, 181, 0.25);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--charcoal-light);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+
+    .hero-scroll span {
+      width: 1px;
+      height: 30px;
+      background: var(--charcoal-light);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+      50% { opacity: 1; transform: scaleY(1); }
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 6rem 2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--deep-blue);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    /* REVEAL ANIMATIONS */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* MISSION & VISION */
+    .mission-vision {
+      background: var(--cream);
+    }
+
+    .mv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 1rem;
+    }
+
+    .mv-card {
+      padding: 3rem;
+      border-radius: 16px;
+      position: relative;
+    }
+
+    .mv-card:first-child {
+      background: var(--cream-dark);
+    }
+
+    .mv-card:last-child {
+      background: var(--deep-blue);
+      color: var(--cream);
+    }
+
+    .mv-card:last-child h3 {
+      color: var(--cream);
+    }
+
+    .mv-card:last-child p {
+      color: rgba(253, 251, 247, 0.8);
+    }
+
+    .mv-card h3 {
+      font-size: 1.75rem;
+      color: var(--deep-blue);
+      margin-bottom: 1rem;
+    }
+
+    .mv-card p {
+      font-size: 1.05rem;
+      color: var(--charcoal-light);
+      line-height: 1.8;
+    }
+
+    .mv-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
+    }
+
+    .mv-card:first-child .mv-icon {
+      background: rgba(106, 155, 181, 0.12);
+      color: var(--water);
+    }
+
+    .mv-card:last-child .mv-icon {
+      background: rgba(253, 251, 247, 0.12);
+      color: var(--gold-light);
+    }
+
+    /* PILLARS */
+    .pillars {
+      background: var(--cream-dark);
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .pillar-card {
+      background: var(--cream);
+      padding: 2.5rem 2rem;
+      border-radius: 16px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid rgba(201, 169, 110, 0.1);
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(42, 37, 32, 0.06);
+    }
+
+    .pillar-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      font-size: 1.4rem;
+    }
+
+    .pillar-card:nth-child(1) .pillar-icon {
+      background: rgba(106, 155, 181, 0.12);
+      color: var(--water);
+    }
+
+    .pillar-card:nth-child(2) .pillar-icon {
+      background: rgba(201, 169, 110, 0.15);
+      color: var(--gold);
+    }
+
+    .pillar-card:nth-child(3) .pillar-icon {
+      background: rgba(44, 74, 90, 0.1);
+      color: var(--deep-blue);
+    }
+
+    .pillar-card h4 {
+      font-size: 1.35rem;
+      color: var(--deep-blue);
+      margin-bottom: 0.75rem;
+    }
+
+    .pillar-card p {
+      font-size: 0.95rem;
+      color: var(--charcoal-light);
+      line-height: 1.7;
+    }
+
+    /* DETAILS */
+    .details {
+      background: var(--deep-blue);
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .details::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(106, 155, 181, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .details .section-label {
+      color: var(--gold-light);
+    }
+
+    .details .section-title {
+      color: var(--cream);
+    }
+
+    .details-subtitle {
+      font-size: 1.1rem;
+      color: rgba(253, 251, 247, 0.7);
+      max-width: 550px;
+      margin-bottom: 3rem;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      position: relative;
+    }
+
+    .detail-item {
+      background: rgba(253, 251, 247, 0.06);
+      border: 1px solid rgba(253, 251, 247, 0.08);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .detail-item:hover {
+      background: rgba(253, 251, 247, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .detail-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(201, 169, 110, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      font-size: 1.1rem;
+      color: var(--gold-light);
+    }
+
+    .detail-item h4 {
+      font-size: 1.2rem;
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+    }
+
+    .detail-item p {
+      font-size: 0.95rem;
+      color: rgba(253, 251, 247, 0.7);
+      line-height: 1.6;
+    }
+
+    .detail-item .highlight {
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    /* MAP */
+    .map-section {
+      background: var(--cream);
+      padding-bottom: 3rem;
+    }
+
+    .map-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3rem;
+      align-items: start;
+      margin-top: 2rem;
+    }
+
+    .map-info h3 {
+      font-size: 1.75rem;
+      color: var(--deep-blue);
+      margin-bottom: 1.5rem;
+    }
+
+    .map-detail {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .map-detail-icon {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      border-radius: 10px;
+      background: rgba(106, 155, 181, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--water);
+      font-size: 1rem;
+      margin-top: 2px;
+    }
+
+    .map-detail h4 {
+      font-size: 1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 0.25rem;
+    }
+
+    .map-detail p {
+      font-size: 0.95rem;
+      color: var(--charcoal-light);
+      line-height: 1.6;
+    }
+
+    .map-embed {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(42, 37, 32, 0.08);
+      border: 1px solid rgba(42, 37, 32, 0.06);
+    }
+
+    .map-embed iframe {
+      display: block;
+      width: 100%;
+      height: 380px;
+      border: 0;
+    }
+
+    .btn-map {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--water);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .btn-map:hover {
+      color: var(--deep-blue);
+    }
+
+    /* AFFILIATION */
+    .affiliation {
+      background: var(--cream-dark);
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .affiliation p {
+      font-size: 1rem;
+      color: var(--charcoal-light);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .affiliation a {
+      color: var(--water);
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(106, 155, 181, 0.3);
+      transition: border-color 0.3s, color 0.3s;
+    }
+
+    .affiliation a:hover {
+      color: var(--deep-blue);
+      border-color: var(--deep-blue);
+    }
+
+    .affil-divider {
+      width: 40px;
+      height: 2px;
+      background: var(--gold);
+      margin: 0 auto 1.5rem;
+      border-radius: 1px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--charcoal);
+      color: rgba(253, 251, 247, 0.5);
+      text-align: center;
+      padding: 2.5rem 2rem;
+      font-size: 0.85rem;
+    }
+
+    footer .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+    }
+
+    /* MOBILE NAV */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 28px;
+      height: 20px;
+      position: relative;
+      z-index: 101;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: var(--charcoal);
+      border-radius: 1px;
+      transition: transform 0.3s, opacity 0.3s;
+      position: absolute;
+      left: 0;
+    }
+
+    .nav-toggle span:nth-child(1) { top: 0; }
+    .nav-toggle span:nth-child(2) { top: 9px; }
+    .nav-toggle span:nth-child(3) { top: 18px; }
+
+    .nav-toggle.active span:nth-child(1) { top: 9px; transform: rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { top: 9px; transform: rotate(-45deg); }
+
+    /* WATER RIPPLE DECORATION */
+    .ripple-line {
+      display: block;
+      width: 60px;
+      height: 3px;
+      margin: 0 auto 2rem;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--water), var(--gold));
+      opacity: 0.5;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .mv-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .map-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .map-embed iframe {
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--cream);
+        flex-direction: column;
+        padding: 5rem 2rem 2rem;
+        gap: 1.5rem;
+        transition: right 0.3s ease;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+      }
+
+      .nav-links.open {
+        right: 0;
+      }
+
+      .pillars-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .details-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 8vw, 3.5rem);
+      }
+
+      section {
+        padding: 4rem 1.25rem;
+      }
+
+      .mv-card {
+        padding: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="#" class="nav-brand">Wells of Healing</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#mission">About</a></li>
+      <li><a href="#pillars">Vision</a></li>
+      <li><a href="#details">Visit</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="#details" class="nav-cta">Get Prayer</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-label reveal">In-Person Prayer Rooms</div>
+    <h1 class="reveal reveal-delay-1">Wells of <em>Healing</em></h1>
+    <p class="hero-sub reveal reveal-delay-2">Hosting the Presence of Jesus, our Healer &mdash; every Thursday evening in Richmond, BC.</p>
+    <a href="#details" class="btn-primary reveal reveal-delay-3">Visit Us Thursday Evenings</a>
+    <div class="hero-scroll">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="mission-vision" id="mission">
+    <div class="container">
+      <div class="section-label reveal">Who We Are</div>
+      <span class="ripple-line reveal" style="margin-left:0;"></span>
+      <div class="mv-grid">
+        <div class="mv-card reveal">
+          <div class="mv-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Our Mission</h3>
+          <p>Healing Rooms host the Presence of Jesus, our Healer, to see people healed, set free, to live a life the Lord has planned for them demonstrating the Kingdom of God.</p>
+        </div>
+        <div class="mv-card reveal reveal-delay-1">
+          <div class="mv-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          </div>
+          <h3>Our Vision</h3>
+          <p>A loving, and safe environment where people of all walks, receive prayer for physical, mental, and emotional afflictions. We follow the examples of Jesus Christ, who is featured in the Bible, who is the same yesterday today and forever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillars -->
+  <section class="pillars" id="pillars">
+    <div class="container" style="text-align:center;">
+      <div class="section-label reveal">Prayer For Every Need</div>
+      <h2 class="section-title reveal">Physical. Mental. Emotional.</h2>
+      <div class="pillars-grid">
+        <div class="pillar-card reveal">
+          <div class="pillar-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h4>Physical Healing</h4>
+          <p>Receive prayer for pain, illness, injury, and physical conditions of every kind.</p>
+        </div>
+        <div class="pillar-card reveal reveal-delay-1">
+          <div class="pillar-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10"/><circle cx="12" cy="12" r="6"/></svg>
+          </div>
+          <h4>Mental Wellness</h4>
+          <p>Find peace and clarity through prayer for anxiety, depression, and mental burdens.</p>
+        </div>
+        <div class="pillar-card reveal reveal-delay-2">
+          <div class="pillar-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h4>Emotional Freedom</h4>
+          <p>Experience breakthrough from grief, trauma, fear, and emotional wounds through compassionate prayer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details -->
+  <section class="details" id="details">
+    <div class="container">
+      <div class="section-label reveal">Plan Your Visit</div>
+      <h2 class="section-title reveal">Everything You Need to Know</h2>
+      <p class="details-subtitle reveal">We provide a safe, loving environment for everyone seeking prayer. No appointment, no cost &mdash; just come as you are.</p>
+      <div class="details-grid">
+        <div class="detail-item reveal">
+          <div class="detail-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="9"/><polyline points="10 5 10 10 14 12"/></svg>
+          </div>
+          <h4>When</h4>
+          <p><span class="highlight">Every Thursday</span><br>7:00 PM &ndash; 8:30 PM</p>
+        </div>
+        <div class="detail-item reveal reveal-delay-1">
+          <div class="detail-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8V3H3v5"/><path d="M1 10h18"/><path d="M3 10v8h14v-8"/></svg>
+          </div>
+          <h4>Where</h4>
+          <p>Room 104<br><span class="highlight">11295 Mellis Drive</span><br>Richmond, BC</p>
+        </div>
+        <div class="detail-item reveal reveal-delay-2">
+          <div class="detail-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          </div>
+          <h4>No Appointment</h4>
+          <p>Walk-ins only.<br>All walks of life are welcome.</p>
+        </div>
+        <div class="detail-item reveal reveal-delay-3">
+          <div class="detail-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h4>Free of Charge</h4>
+          <p>Freely we have received,<br>freely we give.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map / Location -->
+  <section class="map-section" id="location">
+    <div class="container">
+      <div class="section-label reveal">Where to Find Us</div>
+      <span class="ripple-line reveal" style="margin-left:0;"></span>
+      <div class="map-wrapper">
+        <div class="map-info reveal">
+          <h3>Visit Us in Richmond</h3>
+          <div class="map-detail">
+            <div class="map-detail-icon">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4>Address</h4>
+              <p>Room 104, 11295 Mellis Drive<br>Richmond, BC</p>
+            </div>
+          </div>
+          <div class="map-detail">
+            <div class="map-detail-icon">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="10 17 15 12 10 7"/></svg>
+            </div>
+            <div>
+              <h4>Entry Instructions</h4>
+              <p>Enter through the back door &mdash; the same entrance as the Canadian Star Secondary School.</p>
+            </div>
+          </div>
+          <a href="https://www.google.com/maps/search/11295+Mellis+Drive+Richmond+BC" target="_blank" rel="noopener noreferrer" class="btn-map">
+            Open in Google Maps &rarr;
+          </a>
+        </div>
+        <div class="map-embed reveal reveal-delay-1">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2610.5!2d-123.1!3d49.17!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDEwJzEyLjAiTiAxMjPCsDA2JzAwLjAiVw!5e0!3m2!1sen!2sca!4v1600000000000"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Map showing 11295 Mellis Drive, Richmond BC"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Affiliation -->
+  <section class="affiliation">
+    <div class="container reveal">
+      <div class="affil-divider"></div>
+      <p>Wells of Healing is proudly affiliated with the <a href="https://healingrooms.com" target="_blank" rel="noopener noreferrer">International Association of Healing Rooms (IAHR)</a>.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-brand">Wells of Healing</div>
+    <p>Richmond, BC &middot; &copy; 2026</p>
+  </footer>
+
+  <script>
+    // Scroll reveal with Intersection Observer
+    const revealElements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    revealElements.forEach(el => observer.observe(el));
+
+    // Nav scroll effect
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      toggle.classList.toggle('active');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
