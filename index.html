@@ -48,6 +48,13 @@
       line-height: 1.2;
     }
 
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     /* NAV */
     nav {
       position: fixed;
@@ -115,38 +122,33 @@
     /* HERO */
     .hero {
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       align-items: center;
-      text-align: center;
-      padding: 8rem 2rem 4rem;
-      position: relative;
+      padding: 6rem 0 0;
       background: var(--cream);
+      position: relative;
       overflow: hidden;
     }
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -30%;
-      right: -20%;
-      width: 700px;
-      height: 700px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(106, 155, 181, 0.08) 0%, transparent 70%);
-      pointer-events: none;
+    .hero-content {
+      padding: 4rem 2rem 4rem 6rem;
+      position: relative;
+      z-index: 2;
     }
 
-    .hero::after {
+    .hero-image {
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image::after {
       content: '';
       position: absolute;
-      bottom: -20%;
-      left: -15%;
-      width: 500px;
-      height: 500px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(201, 169, 110, 0.07) 0%, transparent 70%);
+      inset: 0;
+      background: linear-gradient(to right, var(--cream) 0%, transparent 20%),
+                  linear-gradient(to top, rgba(44, 74, 90, 0.15) 0%, transparent 40%);
       pointer-events: none;
     }
 
@@ -157,28 +159,14 @@
       text-transform: uppercase;
       color: var(--gold);
       margin-bottom: 1.5rem;
-      position: relative;
-    }
-
-    .hero-label::before,
-    .hero-label::after {
-      content: '';
-      display: inline-block;
-      width: 30px;
-      height: 1px;
-      background: var(--gold);
-      vertical-align: middle;
-      margin: 0 0.75rem;
     }
 
     .hero h1 {
-      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-size: clamp(2.75rem, 5vw, 4.5rem);
       font-weight: 500;
       color: var(--deep-blue);
       margin-bottom: 1.5rem;
-      max-width: 800px;
       letter-spacing: -0.02em;
-      position: relative;
     }
 
     .hero h1 em {
@@ -187,9 +175,9 @@
     }
 
     .hero-sub {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: var(--charcoal-light);
-      max-width: 520px;
+      max-width: 440px;
       margin-bottom: 2.5rem;
       line-height: 1.8;
     }
@@ -214,35 +202,9 @@
       box-shadow: 0 6px 25px rgba(106, 155, 181, 0.25);
     }
 
-    .hero-scroll {
-      position: absolute;
-      bottom: 2.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--charcoal-light);
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      opacity: 0.5;
-    }
-
-    .hero-scroll span {
-      width: 1px;
-      height: 30px;
-      background: var(--charcoal-light);
-      animation: scrollPulse 2s ease-in-out infinite;
-    }
-
-    @keyframes scrollPulse {
-      0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
-      50% { opacity: 1; transform: scaleY(1); }
-    }
-
     /* SECTIONS */
     section {
-      padding: 6rem 2rem;
+      padding: 7rem 2rem;
     }
 
     .container {
@@ -266,7 +228,7 @@
       letter-spacing: -0.02em;
     }
 
-    /* REVEAL ANIMATIONS */
+    /* REVEAL */
     .reveal {
       opacity: 0;
       transform: translateY(30px);
@@ -281,6 +243,36 @@
     .reveal-delay-1 { transition-delay: 0.1s; }
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* EDITORIAL IMAGE BREAK */
+    .image-break {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      height: 380px;
+      gap: 4px;
+    }
+
+    .image-break-item {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .image-break-item img {
+      transition: transform 0.6s ease;
+    }
+
+    .image-break-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .image-break-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(44, 74, 90, 0.08);
+      pointer-events: none;
+    }
 
     /* MISSION & VISION */
     .mission-vision {
@@ -297,7 +289,6 @@
     .mv-card {
       padding: 3rem;
       border-radius: 16px;
-      position: relative;
     }
 
     .mv-card:first-child {
@@ -350,9 +341,70 @@
       color: var(--gold-light);
     }
 
+    /* STORY SECTION — editorial image + text side by side */
+    .story {
+      background: var(--cream-dark);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .story-grid.reverse {
+      grid-template-columns: 1fr 1.1fr;
+    }
+
+    .story-grid.reverse .story-image {
+      order: 2;
+    }
+
+    .story-image {
+      border-radius: 20px;
+      overflow: hidden;
+      height: 480px;
+      box-shadow: 0 20px 60px rgba(42, 37, 32, 0.1);
+      position: relative;
+    }
+
+    .story-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
+      pointer-events: none;
+    }
+
+    .story-text h3 {
+      font-size: 2.25rem;
+      color: var(--deep-blue);
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .story-text p {
+      font-size: 1.1rem;
+      color: var(--charcoal-light);
+      line-height: 1.9;
+      margin-bottom: 1rem;
+    }
+
+    .story-text .story-verse {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--water);
+      margin-top: 1.5rem;
+      padding-left: 1.25rem;
+      border-left: 2px solid var(--gold);
+    }
+
     /* PILLARS */
     .pillars {
-      background: var(--cream-dark);
+      background: var(--cream);
     }
 
     .pillars-grid {
@@ -363,43 +415,34 @@
     }
 
     .pillar-card {
-      background: var(--cream);
-      padding: 2.5rem 2rem;
       border-radius: 16px;
-      text-align: center;
+      overflow: hidden;
+      background: var(--cream-dark);
       transition: transform 0.3s, box-shadow 0.3s;
       border: 1px solid rgba(201, 169, 110, 0.1);
     }
 
     .pillar-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(42, 37, 32, 0.06);
+      box-shadow: 0 12px 40px rgba(42, 37, 32, 0.08);
     }
 
-    .pillar-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.25rem;
-      font-size: 1.4rem;
+    .pillar-card-image {
+      height: 200px;
+      overflow: hidden;
     }
 
-    .pillar-card:nth-child(1) .pillar-icon {
-      background: rgba(106, 155, 181, 0.12);
-      color: var(--water);
+    .pillar-card-image img {
+      transition: transform 0.5s ease;
     }
 
-    .pillar-card:nth-child(2) .pillar-icon {
-      background: rgba(201, 169, 110, 0.15);
-      color: var(--gold);
+    .pillar-card:hover .pillar-card-image img {
+      transform: scale(1.06);
     }
 
-    .pillar-card:nth-child(3) .pillar-icon {
-      background: rgba(44, 74, 90, 0.1);
-      color: var(--deep-blue);
+    .pillar-card-body {
+      padding: 2rem;
+      text-align: center;
     }
 
     .pillar-card h4 {
@@ -584,6 +627,56 @@
       color: var(--deep-blue);
     }
 
+    /* FULL-WIDTH IMAGE WITH QUOTE */
+    .quote-banner {
+      position: relative;
+      height: 450px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .quote-banner img {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .quote-banner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(44, 74, 90, 0.65);
+      z-index: 1;
+    }
+
+    .quote-banner-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
+
+    .quote-banner blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--cream);
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    .quote-banner cite {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-style: normal;
+      color: var(--gold-light);
+      letter-spacing: 0.05em;
+    }
+
     /* AFFILIATION */
     .affiliation {
       background: var(--cream-dark);
@@ -667,7 +760,6 @@
     .nav-toggle.active span:nth-child(2) { opacity: 0; }
     .nav-toggle.active span:nth-child(3) { top: 9px; transform: rotate(-45deg); }
 
-    /* WATER RIPPLE DECORATION */
     .ripple-line {
       display: block;
       width: 60px;
@@ -679,6 +771,55 @@
     }
 
     /* RESPONSIVE */
+    @media (max-width: 1000px) {
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 8rem 2rem 3rem;
+        text-align: center;
+      }
+
+      .hero-sub {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-image {
+        height: 50vh;
+        min-height: 300px;
+      }
+
+      .hero-image::after {
+        background: linear-gradient(to bottom, var(--cream) 0%, transparent 15%),
+                    linear-gradient(to top, rgba(44, 74, 90, 0.15) 0%, transparent 40%);
+      }
+
+      .story-grid,
+      .story-grid.reverse {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .story-grid.reverse .story-image {
+        order: 0;
+      }
+
+      .story-image {
+        height: 350px;
+      }
+
+      .story-text {
+        text-align: center;
+      }
+
+      .story-text .story-verse {
+        text-align: left;
+      }
+    }
+
     @media (max-width: 900px) {
       .mv-grid {
         grid-template-columns: 1fr;
@@ -690,6 +831,14 @@
 
       .map-embed iframe {
         height: 300px;
+      }
+
+      .image-break {
+        height: 260px;
+      }
+
+      .quote-banner {
+        height: 360px;
       }
     }
 
@@ -724,10 +873,6 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .hero h1 {
-        font-size: clamp(2.5rem, 8vw, 3.5rem);
-      }
-
       section {
         padding: 4rem 1.25rem;
       }
@@ -735,11 +880,29 @@
       .mv-card {
         padding: 2rem;
       }
+
+      .image-break {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+
+      .image-break-item {
+        height: 220px;
+      }
+
+      .image-break-item:nth-child(2),
+      .image-break-item:nth-child(3) {
+        display: none;
+      }
     }
 
     @media (max-width: 480px) {
       .details-grid {
         grid-template-columns: 1fr;
+      }
+
+      .hero-content {
+        padding: 7rem 1.25rem 2rem;
       }
     }
   </style>
@@ -760,14 +923,20 @@
     </ul>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero — split layout with editorial image -->
   <section class="hero" id="hero">
-    <div class="hero-label reveal">In-Person Prayer Rooms</div>
-    <h1 class="reveal reveal-delay-1">Wells of <em>Healing</em></h1>
-    <p class="hero-sub reveal reveal-delay-2">Hosting the Presence of Jesus, our Healer &mdash; every Thursday evening in Richmond, BC.</p>
-    <a href="#details" class="btn-primary reveal reveal-delay-3">Visit Us Thursday Evenings</a>
-    <div class="hero-scroll">
-      <span></span>
+    <div class="hero-content">
+      <div class="hero-label reveal">In-Person Prayer Rooms</div>
+      <h1 class="reveal reveal-delay-1">Wells of <em>Healing</em></h1>
+      <p class="hero-sub reveal reveal-delay-2">Hosting the Presence of Jesus, our Healer &mdash; every Thursday evening in Richmond, BC.</p>
+      <a href="#details" class="btn-primary reveal reveal-delay-3">Visit Us Thursday Evenings</a>
+    </div>
+    <div class="hero-image">
+      <img
+        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=1200&fit=crop&crop=faces"
+        alt="Peaceful scene of people gathering together"
+        loading="eager"
+      >
     </div>
   </section>
 
@@ -795,36 +964,117 @@
     </div>
   </section>
 
-  <!-- Pillars -->
+  <!-- Editorial image strip -->
+  <div class="image-break">
+    <div class="image-break-item">
+      <img
+        src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=600&h=400&fit=crop"
+        alt="Hands clasped together in prayer"
+        loading="lazy"
+      >
+    </div>
+    <div class="image-break-item">
+      <img
+        src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=600&h=400&fit=crop"
+        alt="Community gathered together supporting one another"
+        loading="lazy"
+      >
+    </div>
+    <div class="image-break-item">
+      <img
+        src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=600&h=400&fit=crop"
+        alt="Open Bible with warm light"
+        loading="lazy"
+      >
+    </div>
+  </div>
+
+  <!-- Story section — editorial image + text -->
+  <section class="story">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-image reveal">
+          <img
+            src="https://images.unsplash.com/photo-1459183885421-5cc683b8dbba?w=700&h=900&fit=crop"
+            alt="Compassionate hands offering care and prayer"
+            loading="lazy"
+          >
+        </div>
+        <div class="story-text reveal reveal-delay-1">
+          <div class="section-label">A Place of Encounter</div>
+          <h3>Where People Meet the Healer</h3>
+          <p>Every Thursday evening, our trained prayer teams welcome people from all walks of life &mdash; no matter their background, belief, or burden. Whether you're carrying physical pain, emotional weight, or mental distress, you are welcomed here.</p>
+          <p>We believe that Jesus is the same yesterday, today, and forever &mdash; and His compassion still moves to heal.</p>
+          <div class="story-verse">
+            &ldquo;He heals the brokenhearted and binds up their wounds.&rdquo;<br>
+            <small>&mdash; Psalm 147:3</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillars — with images -->
   <section class="pillars" id="pillars">
     <div class="container" style="text-align:center;">
       <div class="section-label reveal">Prayer For Every Need</div>
       <h2 class="section-title reveal">Physical. Mental. Emotional.</h2>
       <div class="pillars-grid">
         <div class="pillar-card reveal">
-          <div class="pillar-icon">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <div class="pillar-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1516534775068-ba3e7458af70?w=500&h=350&fit=crop"
+              alt="Gentle hands representing physical healing"
+              loading="lazy"
+            >
           </div>
-          <h4>Physical Healing</h4>
-          <p>Receive prayer for pain, illness, injury, and physical conditions of every kind.</p>
+          <div class="pillar-card-body">
+            <h4>Physical Healing</h4>
+            <p>Receive prayer for pain, illness, injury, and physical conditions of every kind.</p>
+          </div>
         </div>
         <div class="pillar-card reveal reveal-delay-1">
-          <div class="pillar-icon">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10"/><circle cx="12" cy="12" r="6"/></svg>
+          <div class="pillar-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=500&h=350&fit=crop"
+              alt="Peaceful moment representing mental wellness"
+              loading="lazy"
+            >
           </div>
-          <h4>Mental Wellness</h4>
-          <p>Find peace and clarity through prayer for anxiety, depression, and mental burdens.</p>
+          <div class="pillar-card-body">
+            <h4>Mental Wellness</h4>
+            <p>Find peace and clarity through prayer for anxiety, depression, and mental burdens.</p>
+          </div>
         </div>
         <div class="pillar-card reveal reveal-delay-2">
-          <div class="pillar-icon">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <div class="pillar-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1518398046578-8cca57782e17?w=500&h=350&fit=crop"
+              alt="Warm embrace representing emotional freedom"
+              loading="lazy"
+            >
           </div>
-          <h4>Emotional Freedom</h4>
-          <p>Experience breakthrough from grief, trauma, fear, and emotional wounds through compassionate prayer.</p>
+          <div class="pillar-card-body">
+            <h4>Emotional Freedom</h4>
+            <p>Experience breakthrough from grief, trauma, fear, and emotional wounds through compassionate prayer.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Quote banner with background image -->
+  <div class="quote-banner">
+    <img
+      src="https://images.unsplash.com/photo-1506755855567-92ff770e8d00?w=1400&h=600&fit=crop&crop=bottom"
+      alt="Calm water reflecting light"
+      loading="lazy"
+    >
+    <div class="quote-banner-content reveal">
+      <blockquote>&ldquo;Come to me, all you who are weary and burdened, and I will give you rest.&rdquo;</blockquote>
+      <cite>Matthew 11:28</cite>
+    </div>
+  </div>
 
   <!-- Details -->
   <section class="details" id="details">
@@ -923,7 +1173,7 @@
   </footer>
 
   <script>
-    // Scroll reveal with Intersection Observer
+    // Scroll reveal
     const revealElements = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -933,25 +1183,22 @@
         }
       });
     }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-
     revealElements.forEach(el => observer.observe(el));
 
-    // Nav scroll effect
+    // Nav scroll
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    // Mobile nav toggle
+    // Mobile nav
     const toggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
-
     toggle.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('open');
       toggle.classList.toggle('active');
       toggle.setAttribute('aria-expanded', isOpen);
     });
-
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
