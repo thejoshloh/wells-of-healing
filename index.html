@@ -1,1310 +1,970 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wells of Healing — Free Prayer Ministry in Richmond, BC | Every Thursday</title>
-  <meta name="description" content="Receive free in-person prayer for physical, mental, and emotional healing every Thursday 7:00–8:30 PM at 11295 Mellis Drive, Richmond, BC. Walk-ins welcome. No appointment necessary. Affiliated with the International Association of Healing Rooms.">
-  <meta name="keywords" content="healing rooms Richmond BC, free prayer Richmond, Christian prayer ministry, prayer for healing, Fraserview MB Church, Wells of Healing, Thursday prayer, physical healing prayer, emotional healing, mental health prayer, IAHR, healing rooms Canada, prayer ministry Vancouver">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Wells of Healing — Free Healing Prayer in Richmond, BC | Every Thursday</title>
+  <meta name="description" content="Wells of Healing is a Christian healing rooms ministry offering free, in-person prayer for physical, mental and emotional healing. Every Thursday, 7:00–8:30 PM, Room 104, 11295 Mellis Drive, Richmond, BC. Walk-ins welcome — no appointment needed.">
   <meta name="author" content="Wells of Healing">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://wellsofhealing.com">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#FBF8F2">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="canonical" href="https://www.wellsofhealing.com/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Wells of Healing — Free Prayer Ministry in Richmond, BC">
-  <meta property="og:description" content="Free in-person prayer for physical, mental, and emotional healing. Every Thursday 7:00–8:30 PM at Fraserview MB Church, Richmond, BC. No appointment needed.">
+  <meta property="og:title" content="Wells of Healing — Free Healing Prayer in Richmond, BC">
+  <meta property="og:description" content="Free, in-person prayer for physical, mental and emotional healing. Every Thursday, 7:00–8:30 PM at Fraserview MB Church, Richmond, BC. Walk-ins welcome.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://wellsofhealing.com">
-  <meta property="og:image" content="https://wellsofhealing.com/images/water.webp">
-  <meta property="og:image:alt" content="Wells of Healing — Peaceful water imagery">
+  <meta property="og:url" content="https://www.wellsofhealing.com/">
+  <meta property="og:image" content="https://www.wellsofhealing.com/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Wells of Healing — still water with a single ripple at dawn">
   <meta property="og:locale" content="en_CA">
   <meta property="og:site_name" content="Wells of Healing">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Wells of Healing — Free Prayer Ministry in Richmond, BC">
-  <meta name="twitter:description" content="Free in-person prayer every Thursday 7–8:30 PM in Richmond, BC. No appointment needed.">
-  <meta name="twitter:image" content="https://wellsofhealing.com/images/water.webp">
+  <meta name="twitter:title" content="Wells of Healing — Free Healing Prayer in Richmond, BC">
+  <meta name="twitter:description" content="Free, in-person prayer every Thursday, 7:00–8:30 PM in Richmond, BC. Walk-ins welcome.">
+  <meta name="twitter:image" content="https://www.wellsofhealing.com/images/og-image.jpg">
 
-  <!-- Local SEO / Schema.org -->
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Wells of Healing",
-    "description": "Christian healing rooms ministry offering free in-person prayer for physical, mental, and emotional healing in Richmond, BC.",
-    "url": "https://wellsofhealing.com",
-    "logo": "https://wellsofhealing.com/images/favicon.svg",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Room 104, 11295 Mellis Drive",
-      "addressLocality": "Richmond",
-      "addressRegion": "BC",
-      "postalCode": "V6X 2R7",
-      "addressCountry": "CA"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 49.1733,
-      "longitude": -123.0958
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Thursday",
-      "opens": "19:00",
-      "closes": "20:30"
-    },
-    "specialOpeningHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "validFrom": "2026-12-24", "validThrough": "2026-12-24", "opens": "00:00", "closes": "00:00" },
-      { "@type": "OpeningHoursSpecification", "validFrom": "2026-12-31", "validThrough": "2026-12-31", "opens": "00:00", "closes": "00:00" }
-    ],
-    "priceRange": "Free",
-    "sameAs": [
-      "https://healingrooms.com"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.wellsofhealing.com/#organization",
+        "name": "Wells of Healing",
+        "url": "https://www.wellsofhealing.com/",
+        "logo": "https://www.wellsofhealing.com/images/favicon.svg",
+        "image": "https://www.wellsofhealing.com/images/og-image.jpg",
+        "description": "Christian healing rooms ministry offering free, in-person prayer for physical, mental, and emotional healing in Richmond, BC.",
+        "slogan": "Hosting the Presence of Jesus, our Healer.",
+        "areaServed": ["Richmond, BC", "Vancouver, BC", "Metro Vancouver"],
+        "memberOf": {
+          "@type": "Organization",
+          "name": "International Association of Healing Rooms",
+          "alternateName": "IAHR",
+          "url": "https://healingrooms.com"
+        },
+        "location": { "@id": "https://www.wellsofhealing.com/#place" },
+        "sameAs": ["https://healingrooms.com"]
+      },
+      {
+        "@type": "Place",
+        "@id": "https://www.wellsofhealing.com/#place",
+        "name": "Wells of Healing — Room 104, Fraserview MB Church",
+        "description": "Healing room in Room 104 of Fraserview MB Church. Enter through the back door — the same entrance as the Canadian Star Secondary School.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Room 104, 11295 Mellis Drive",
+          "addressLocality": "Richmond",
+          "addressRegion": "BC",
+          "postalCode": "V6X 2R7",
+          "addressCountry": "CA"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 49.1733,
+          "longitude": -123.0958
+        },
+        "hasMap": "https://maps.app.goo.gl/rnTJjTPMU88ziMQG7",
+        "isAccessibleForFree": true,
+        "publicAccess": true,
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Thursday",
+          "opens": "19:00",
+          "closes": "20:30"
+        },
+        "specialOpeningHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "validFrom": "2026-12-24", "validThrough": "2026-12-24", "opens": "00:00", "closes": "00:00" },
+          { "@type": "OpeningHoursSpecification", "validFrom": "2026-12-31", "validThrough": "2026-12-31", "opens": "00:00", "closes": "00:00" }
+        ]
+      },
+      {
+        "@type": "Event",
+        "@id": "https://www.wellsofhealing.com/#thursday-prayer",
+        "name": "Wells of Healing — Thursday Healing Prayer",
+        "description": "Free, walk-in prayer for physical, mental, and emotional healing with a trained prayer team. No appointment necessary.",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "isAccessibleForFree": true,
+        "location": { "@id": "https://www.wellsofhealing.com/#place" },
+        "organizer": { "@id": "https://www.wellsofhealing.com/#organization" },
+        "image": "https://www.wellsofhealing.com/images/og-image.jpg",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "url": "https://www.wellsofhealing.com/#visit" },
+        "eventSchedule": {
+          "@type": "Schedule",
+          "repeatFrequency": "P1W",
+          "byDay": "https://schema.org/Thursday",
+          "startTime": "19:00",
+          "endTime": "20:30",
+          "scheduleTimezone": "America/Vancouver",
+          "exceptDate": ["2026-12-24", "2026-12-31"]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.wellsofhealing.com/#website",
+        "url": "https://www.wellsofhealing.com/",
+        "name": "Wells of Healing",
+        "inLanguage": "en-CA",
+        "publisher": { "@id": "https://www.wellsofhealing.com/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.wellsofhealing.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "When is Wells of Healing open?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Every Thursday evening from 7:00 to 8:30 PM in Room 104 at 11295 Mellis Drive, Richmond, BC (Fraserview MB Church)." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need an appointment to receive prayer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Wells of Healing is walk-in only — no appointment is necessary. Simply arrive any Thursday between 7:00 and 8:30 PM." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a cost for prayer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Prayer is always free of charge. Freely we have received, freely we give." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I have to be a Christian or attend a church to come?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. People from all walks of life are welcome, no matter their background, belief, or burden. We provide a safe, loving environment for everyone seeking prayer." }
+          },
+          {
+            "@type": "Question",
+            "name": "What can I receive prayer for?",
+            "acceptedAnswer": { "@type": "Answer", "text": "You can receive prayer for physical needs such as pain, illness, and injury; mental burdens such as anxiety and depression; and emotional wounds such as grief, trauma, and fear." }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens when I arrive?",
+            "acceptedAnswer": { "@type": "Answer", "text": "You will be welcomed and a trained prayer team will pray with you personally, following the example of Jesus Christ, in a safe and loving environment. Come as you are." }
+          },
+          {
+            "@type": "Question",
+            "name": "Which entrance do I use?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Enter through the back door of Fraserview MB Church at 11295 Mellis Drive, Richmond — the same entrance as the Canadian Star Secondary School — and come to Room 104." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Wells of Healing part of a larger ministry?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Wells of Healing is affiliated with the International Association of Healing Rooms (IAHR)." }
+          }
+        ]
+      }
     ]
   }
   </script>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="preload" as="image" type="image/webp"
+        imagesrcset="/images/hero-still-water-828.webp 828w, /images/hero-still-water-1280.webp 1280w, /images/hero-still-water-1920.webp 1920w, /images/hero-still-water-2752.webp 2752w"
+        imagesizes="100vw" fetchpriority="high">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400..700&display=swap" rel="stylesheet">
+
   <style>
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     :root {
-      --cream: #FDFBF7;
-      --cream-dark: #F7F3ED;
-      --gold: #C9A96E;
-      --gold-light: #D4BA88;
-      --water: #6A9BB5;
-      --water-light: #8BB5C9;
-      --deep-blue: #2C4A5A;
-      --charcoal: #2A2520;
-      --charcoal-light: #4A4540;
+      --paper: #FBF8F2;
+      --paper-2: #F3EDE2;
+      --paper-3: #EAE2D3;
+      --ink: #1D2A33;
+      --ink-soft: #4A5661;
+      --ink-mute: #6B7580;
+      --deep: #17313F;
+      --deep-2: #1F4152;
+      --water: #5E8FA8;
+      --gold: #9A7434;
+      --gold-soft: #D8C29A;
+      --line: rgba(29, 42, 51, 0.12);
+      --serif: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+      --sans: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --gutter: clamp(1.25rem, 5vw, 4.5rem);
+      --maxw: 1240px;
+      --radius: 14px;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; -webkit-text-size-adjust: 100%; }
 
     body {
-      font-family: 'DM Sans', sans-serif;
-      color: var(--charcoal);
-      background: var(--cream);
+      font-family: var(--sans);
+      font-size: 1.0625rem;
+      color: var(--ink);
+      background: var(--paper);
       line-height: 1.7;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    h1, h2, h3, h4 {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 600;
-      line-height: 1.2;
-    }
+    h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.08; letter-spacing: -0.01em; text-wrap: balance; }
+    p { text-wrap: pretty; }
+    blockquote { text-wrap: balance; }
+    em { font-style: italic; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; }
+    ::selection { background: var(--gold-soft); color: var(--ink); }
 
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
 
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 100;
-      padding: 1.25rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: background 0.4s, box-shadow 0.4s, padding 0.4s;
+    .skip-link {
+      position: absolute; left: 1rem; top: -4rem; z-index: 200;
+      background: var(--deep); color: var(--paper); padding: 0.75rem 1.25rem; border-radius: 8px;
+      text-decoration: none; font-weight: 500; transition: top 0.2s;
     }
+    .skip-link:focus { top: 1rem; }
 
-    nav.scrolled {
-      background: rgba(253, 251, 247, 0.95);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 1px 20px rgba(42, 37, 32, 0.06);
-      padding: 0.75rem 2rem;
+    .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold);
     }
+    .eyebrow::before { content: ""; width: 28px; height: 1px; background: currentColor; opacity: 0.7; }
 
-    .nav-brand {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--deep-blue);
-      text-decoration: none;
-      letter-spacing: -0.01em;
+    .h2 { font-size: clamp(2.4rem, 5.2vw, 4.25rem); margin-top: 1.1rem; }
+    .h2 em { color: var(--water); }
+    .lede { font-size: clamp(1.05rem, 1.4vw, 1.2rem); color: var(--ink-soft); max-width: 36rem; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+      min-height: 52px; padding: 0.85rem 1.6rem; border-radius: 999px;
+      font: 500 0.975rem/1 var(--sans); letter-spacing: 0.01em; text-decoration: none;
+      transition: background 0.35s var(--ease), color 0.35s var(--ease), transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s;
+      cursor: pointer; border: 1px solid transparent;
     }
+    .btn svg { width: 18px; height: 18px; transition: transform 0.35s var(--ease); }
+    .btn:hover svg { transform: translateX(3px); }
+    .btn-primary { background: var(--deep); color: var(--paper); box-shadow: 0 10px 30px -12px rgba(23, 49, 63, 0.55); }
+    .btn-primary:hover { background: var(--deep-2); transform: translateY(-2px); box-shadow: 0 16px 36px -14px rgba(23, 49, 63, 0.6); }
+    .btn-ghost { border-color: rgba(29, 42, 51, 0.25); color: var(--ink); background: rgba(251, 248, 242, 0.55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+    .btn-ghost:hover { border-color: var(--ink); background: rgba(251, 248, 242, 0.9); }
+    .btn-light { background: var(--paper); color: var(--deep); }
+    .btn-light:hover { background: #fff; transform: translateY(-2px); }
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-      align-items: center;
+    /* ========== HEADER ========== */
+    .site-header {
+      position: fixed; inset: 0 0 auto 0; z-index: 100;
+      transition: background 0.5s var(--ease), box-shadow 0.5s var(--ease), backdrop-filter 0.5s;
     }
-
-    .nav-links a {
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--charcoal-light);
-      text-decoration: none;
+    .site-header.scrolled {
+      background: rgba(251, 248, 242, 0.86);
+      backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px);
+      box-shadow: 0 1px 0 var(--line);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 76px; max-width: 1440px; margin: 0 auto; padding: 0 var(--gutter);
+      transition: height 0.5s var(--ease);
+    }
+    .scrolled .nav { height: 64px; }
+    .brand { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--deep); }
+    .brand svg { width: 26px; height: 26px; flex-shrink: 0; }
+    .brand span { font-family: var(--serif); font-size: 1.45rem; font-weight: 600; letter-spacing: -0.01em; }
+    .nav-links { display: flex; align-items: center; gap: 2.25rem; list-style: none; }
+    .nav-links a:not(.btn) {
+      position: relative; font-size: 0.925rem; font-weight: 500; color: var(--ink-soft); text-decoration: none; padding: 0.5rem 0;
       transition: color 0.3s;
-      letter-spacing: 0.02em;
     }
-
-    .nav-links a:hover {
-      color: var(--deep-blue);
+    .nav-links a:not(.btn)::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: 0.2rem; height: 1px; background: var(--gold);
+      transform: scaleX(0); transform-origin: right; transition: transform 0.45s var(--ease);
     }
+    .nav-links a:not(.btn):hover { color: var(--ink); }
+    .nav-links a:not(.btn):hover::after { transform: scaleX(1); transform-origin: left; }
+    .nav-links .btn { min-height: 44px; padding: 0.7rem 1.3rem; font-size: 0.9rem; }
 
-    .nav-links .nav-cta {
-      background: var(--deep-blue);
-      color: var(--cream);
-      padding: 0.6rem 1.25rem;
-      border-radius: 6px;
-      transition: background 0.3s, transform 0.2s;
+    .menu-btn {
+      display: none; width: 48px; height: 48px; margin-right: -10px; border: 0; background: none; cursor: pointer;
+      position: relative; z-index: 120; color: var(--deep);
     }
+    .menu-btn span { position: absolute; left: 13px; right: 13px; height: 1.5px; background: currentColor; border-radius: 2px; transition: transform 0.45s var(--ease), opacity 0.3s; }
+    .menu-btn span:nth-child(1) { top: 19px; }
+    .menu-btn span:nth-child(2) { top: 28px; }
+    .menu-open .menu-btn span:nth-child(1) { transform: translateY(4.5px) rotate(45deg); }
+    .menu-open .menu-btn span:nth-child(2) { transform: translateY(-4.5px) rotate(-45deg); }
 
-    .nav-links .nav-cta:hover {
-      background: var(--water);
-      color: #fff;
-      transform: translateY(-1px);
+    .mobile-menu {
+      position: fixed; inset: 0; z-index: 99; background: var(--paper);
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: 7rem var(--gutter) calc(2rem + env(safe-area-inset-bottom));
+      opacity: 0; visibility: hidden; transition: opacity 0.45s var(--ease), visibility 0.45s;
     }
+    .menu-open .mobile-menu { opacity: 1; visibility: visible; }
+    .mobile-menu ul { list-style: none; }
+    .mobile-menu li { border-bottom: 1px solid var(--line); overflow: hidden; }
+    .mobile-menu li a {
+      display: flex; justify-content: space-between; align-items: baseline; padding: 1rem 0;
+      font-family: var(--serif); font-size: 2.1rem; color: var(--deep); text-decoration: none;
+      transform: translateY(100%); transition: transform 0.6s var(--ease);
+    }
+    .mobile-menu li a small { font-family: var(--sans); font-size: 0.75rem; letter-spacing: 0.15em; color: var(--gold); }
+    .menu-open .mobile-menu li a { transform: none; }
+    .menu-open .mobile-menu li:nth-child(2) a { transition-delay: 0.05s; }
+    .menu-open .mobile-menu li:nth-child(3) a { transition-delay: 0.1s; }
+    .menu-open .mobile-menu li:nth-child(4) a { transition-delay: 0.15s; }
+    .menu-open .mobile-menu li:nth-child(5) a { transition-delay: 0.2s; }
+    .mobile-menu-foot { font-size: 0.95rem; color: var(--ink-soft); }
+    .mobile-menu-foot strong { color: var(--ink); font-weight: 600; display: block; }
+    .mobile-menu-foot .btn { width: 100%; margin-top: 1.25rem; }
 
-    /* HERO */
+    /* ========== HERO ========== */
     .hero {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      padding: 6rem 0 0;
-      background: var(--cream);
-      position: relative;
-      overflow: hidden;
+      position: relative; min-height: 100vh; min-height: 100svh;
+      display: flex; align-items: center; overflow: hidden; isolation: isolate;
+      padding: 7.5rem 0 4.5rem;
     }
-
-    .hero-content {
-      padding: 4rem 2rem 4rem 6rem;
-      position: relative;
-      z-index: 2;
+    .hero-media { position: absolute; inset: 0; z-index: -2; }
+    .hero-media img {
+      width: 100%; height: 115%; object-fit: cover; object-position: 60% 50%;
+      will-change: transform; transform-origin: 60% 55%;
+      animation: heroSettle 3.2s var(--ease) both;
     }
-
-    .hero-image {
-      height: 100vh;
-      position: relative;
-      overflow: hidden;
+    @keyframes heroSettle { from { transform: scale(1.08); opacity: 0.001; filter: blur(6px); } to { transform: scale(1); opacity: 1; filter: blur(0); } }
+    .hero::after {
+      content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(251, 248, 242, 0.88) 0%, rgba(251, 248, 242, 0.55) 38%, rgba(251, 248, 242, 0) 64%),
+        linear-gradient(0deg, var(--paper) 0%, rgba(251, 248, 242, 0) 22%);
     }
-
-    .hero-image::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to right, var(--cream) 0%, transparent 20%),
-                  linear-gradient(to top, rgba(44, 74, 90, 0.15) 0%, transparent 40%);
-      pointer-events: none;
-    }
-
-    .hero-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.5rem;
-    }
-
+    .hero-inner { width: 100%; }
+    .hero-copy { max-width: 40rem; }
     .hero h1 {
-      font-size: clamp(4rem, 8vw, 7rem);
-      font-weight: 500;
-      color: var(--deep-blue);
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.02em;
+      font-size: clamp(3.6rem, 10.5vw, 9rem); font-weight: 400; line-height: 0.92; letter-spacing: -0.025em;
+      color: var(--deep); margin: 1.5rem 0 1.75rem;
     }
-
-    .hero h1 em {
-      font-style: italic;
-      color: var(--water);
+    .hero h1 em { display: block; color: var(--water); font-weight: 400; padding-left: 0.08em; }
+    .hero-sub { font-family: var(--serif); font-size: clamp(1.35rem, 2.1vw, 1.75rem); line-height: 1.35; color: var(--ink); max-width: 30rem; }
+    .hero-meta {
+      display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin: 1.75rem 0 2.25rem;
+      font-size: 0.95rem; color: var(--ink-soft); list-style: none;
     }
+    .hero-meta li { display: inline-flex; align-items: center; gap: 0.5rem; }
+    .hero-meta svg { width: 17px; height: 17px; color: var(--gold); flex-shrink: 0; }
+    .hero-meta strong { color: var(--ink); font-weight: 600; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 
-    .hero-sub {
-      font-size: 1.15rem;
-      color: var(--charcoal-light);
-      max-width: 440px;
-      margin-bottom: 2.5rem;
-      line-height: 1.8;
+    .scroll-cue {
+      position: absolute; left: 50%; bottom: 1.75rem; transform: translateX(-50%);
+      width: 1px; height: 56px; background: linear-gradient(var(--line), transparent); overflow: hidden;
     }
-
-    .btn-primary {
-      display: inline-block;
-      background: var(--deep-blue);
-      color: var(--cream);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 500;
-      padding: 1rem 2.25rem;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
-      box-shadow: 0 4px 20px rgba(44, 74, 90, 0.15);
+    .scroll-cue::after {
+      content: ""; position: absolute; left: 0; top: -40%; width: 1px; height: 40%; background: var(--gold);
+      animation: cue 2.6s var(--ease) infinite;
     }
+    @keyframes cue { to { top: 110%; } }
 
-    .btn-primary:hover {
-      background: var(--water);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 25px rgba(106, 155, 181, 0.25);
-    }
+    /* Intro animation */
+    .intro { opacity: 0; transform: translateY(18px); animation: introUp 1.2s var(--ease) forwards; }
+    .intro-1 { animation-delay: 0.35s; } .intro-2 { animation-delay: 0.5s; } .intro-3 { animation-delay: 0.7s; }
+    .intro-4 { animation-delay: 0.85s; } .intro-5 { animation-delay: 1s; }
+    @keyframes introUp { to { opacity: 1; transform: none; } }
 
-    /* SECTIONS */
-    section {
-      padding: 7rem 2rem;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .section-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1rem;
-    }
-
-    .section-title {
-      font-size: clamp(2rem, 4vw, 3rem);
-      color: var(--deep-blue);
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.02em;
-    }
-
-    /* REVEAL */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-
-    /* EDITORIAL IMAGE BREAK */
-    .image-break {
-      padding: 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      height: 380px;
-      gap: 4px;
-    }
-
-    .image-break-item {
-      overflow: hidden;
-      position: relative;
-    }
-
-    .image-break-item img {
-      transition: transform 0.6s ease;
-    }
-
-    .image-break-item:hover img {
-      transform: scale(1.05);
-    }
-
-    .image-break-item::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(44, 74, 90, 0.08);
-      pointer-events: none;
-    }
-
-    /* MISSION & VISION */
-    .mission-vision {
-      background: var(--cream);
-    }
-
-    .mv-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      margin-top: 1rem;
-    }
-
-    .mv-card {
-      padding: 3rem;
-      border-radius: 16px;
-    }
-
-    .mv-card:first-child {
-      background: var(--cream-dark);
-    }
-
-    .mv-card:last-child {
-      background: var(--deep-blue);
-      color: var(--cream);
-    }
-
-    .mv-card:last-child h3 {
-      color: var(--cream);
-    }
-
-    .mv-card:last-child p {
-      color: rgba(253, 251, 247, 0.8);
-    }
-
-    .mv-card h3 {
-      font-size: 1.75rem;
-      color: var(--deep-blue);
-      margin-bottom: 1rem;
-    }
-
-    .mv-card p {
-      font-size: 1.05rem;
-      color: var(--charcoal-light);
-      line-height: 1.8;
-    }
-
-    .mv-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      font-size: 1.25rem;
-    }
-
-    .mv-card:first-child .mv-icon {
-      background: rgba(106, 155, 181, 0.12);
-      color: var(--water);
-    }
-
-    .mv-card:last-child .mv-icon {
-      background: rgba(253, 251, 247, 0.12);
-      color: var(--gold-light);
-    }
-
-    /* STORY SECTION — editorial image + text side by side */
-    .story {
-      background: var(--cream-dark);
-    }
-
-    .story-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .story-grid.reverse {
-      grid-template-columns: 1fr 1.1fr;
-    }
-
-    .story-grid.reverse .story-image {
-      order: 2;
-    }
-
-    .story-image {
-      border-radius: 20px;
-      overflow: hidden;
-      height: 480px;
-      box-shadow: 0 20px 60px rgba(42, 37, 32, 0.1);
-      position: relative;
-    }
-
-    .story-image::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: 20px;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
-      pointer-events: none;
-    }
-
-    .story-text h3 {
-      font-size: 2.25rem;
-      color: var(--deep-blue);
-      margin-bottom: 1.25rem;
-      letter-spacing: -0.02em;
-    }
-
-    .story-text p {
-      font-size: 1.1rem;
-      color: var(--charcoal-light);
-      line-height: 1.9;
-      margin-bottom: 1rem;
-    }
-
-    .story-text .story-verse {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      font-style: italic;
-      color: var(--water);
-      margin-top: 1.5rem;
-      padding-left: 1.25rem;
-      border-left: 2px solid var(--gold);
-    }
-
-    /* PILLARS */
-    .pillars {
-      background: var(--cream);
-    }
-
-    .pillars-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 2.5rem;
-    }
-
-    .pillar-card {
-      border-radius: 16px;
-      overflow: hidden;
-      background: var(--cream-dark);
-      transition: transform 0.3s, box-shadow 0.3s;
-      border: 1px solid rgba(201, 169, 110, 0.1);
-    }
-
-    .pillar-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(42, 37, 32, 0.08);
-    }
-
-    .pillar-card-image {
-      height: 200px;
-      overflow: hidden;
-    }
-
-    .pillar-card-image img {
-      transition: transform 0.5s ease;
-    }
-
-    .pillar-card:hover .pillar-card-image img {
-      transform: scale(1.06);
-    }
-
-    .pillar-card-body {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .pillar-card h4 {
-      font-size: 1.35rem;
-      color: var(--deep-blue);
-      margin-bottom: 0.75rem;
-    }
-
-    .pillar-card p {
-      font-size: 0.95rem;
-      color: var(--charcoal-light);
-      line-height: 1.7;
-    }
-
-    /* DETAILS */
-    .details {
-      background: var(--deep-blue);
-      color: var(--cream);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .details::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 600px;
-      height: 600px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(106, 155, 181, 0.1) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .details .section-label {
-      color: var(--gold-light);
-    }
-
-    .details .section-title {
-      color: var(--cream);
-    }
-
-    /* HOLIDAY CLOSURE NOTICE (auto-hides after data-expires) */
+    /* ========== CLOSURE NOTICE (auto-hides after data-expires) ========== */
     .closure-notice {
-      display: flex;
-      gap: 0.85rem;
-      align-items: flex-start;
-      background: #fff;
-      border: 1px solid rgba(201, 169, 110, 0.45);
-      border-left: 4px solid var(--gold);
-      border-radius: 10px;
-      padding: 0.9rem 1.1rem;
-      margin-bottom: 2rem;
-      max-width: 460px;
-      box-shadow: 0 6px 24px rgba(42, 37, 32, 0.06);
-      text-align: left;
-      font-size: 0.925rem;
-      line-height: 1.55;
-      color: var(--charcoal-light);
+      display: flex; gap: 0.65rem; align-items: flex-start; text-align: left;
+      margin-top: 1.25rem; padding: 0.8rem 1rem;
+      background: rgba(216, 194, 154, 0.14);
+      border: 1px solid var(--line); border-radius: 10px;
+      font-size: 0.875rem; line-height: 1.55; color: var(--ink-soft);
     }
-    .closure-notice svg { flex-shrink: 0; color: var(--gold); margin-top: 0.15rem; }
-    .closure-notice strong { display: block; color: var(--deep-blue); font-weight: 700; margin-bottom: 0.15rem; }
-    .details .closure-notice { margin: 0 auto 3rem; max-width: 620px; text-align: left; }
+    .closure-notice svg { flex-shrink: 0; width: 16px; height: 16px; margin-top: 0.2rem; color: var(--gold); }
+    .closure-notice strong { font-weight: 600; color: var(--ink); margin-right: 0.35rem; }
+    .closure-notice strong::after { content: " \00B7"; color: var(--ink-mute); font-weight: 400; }
 
-    .details-subtitle {
-      font-size: 1.1rem;
-      color: rgba(253, 251, 247, 0.7);
-      max-width: 550px;
-      margin-bottom: 3rem;
+    /* ========== SECTIONS ========== */
+    section { position: relative; }
+    .section { padding: clamp(5rem, 11vw, 9.5rem) 0; }
+
+    /* Welcome */
+    .welcome-statement {
+      font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 4.4vw, 3.6rem); line-height: 1.15;
+      color: var(--deep); max-width: 58rem; margin-top: 1.75rem; letter-spacing: -0.015em;
     }
+    .welcome-statement em { color: var(--water); }
+    .mv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 5rem); margin-top: clamp(3rem, 6vw, 5rem); padding-top: clamp(2rem, 4vw, 3rem); border-top: 1px solid var(--line); }
+    .mv-item .num { font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--gold); }
+    .mv-item h3 { font-size: clamp(1.7rem, 2.6vw, 2.2rem); margin: 0.35rem 0 0.9rem; color: var(--deep); }
+    .mv-item p { color: var(--ink-soft); max-width: 32rem; }
 
-    .details-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
-      position: relative;
+    /* Story */
+    .story { background: var(--paper-2); }
+    .story-grid { display: grid; grid-template-columns: 5fr 6fr; gap: clamp(2.5rem, 7vw, 7rem); align-items: center; }
+    .frame { position: relative; overflow: hidden; border-radius: var(--radius); background: var(--paper-3); }
+    .frame img { width: 100%; height: 100%; object-fit: cover; }
+    .story-media { aspect-ratio: 4 / 5; }
+    .story-media img { position: absolute; left: 0; top: -10%; height: 120%; will-change: transform; }
+    .story-copy h2 { color: var(--deep); }
+    .story-copy p { color: var(--ink-soft); margin-top: 1.25rem; max-width: 34rem; }
+    .verse {
+      margin-top: 2.25rem; padding-left: 1.5rem; border-left: 1px solid var(--gold);
+      font-family: var(--serif); font-style: italic; font-size: clamp(1.4rem, 2.2vw, 1.75rem); line-height: 1.35; color: var(--deep);
     }
+    .verse cite { display: block; margin-top: 0.6rem; font-family: var(--sans); font-style: normal; font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); }
 
-    .detail-item {
-      background: rgba(253, 251, 247, 0.06);
-      border: 1px solid rgba(253, 251, 247, 0.08);
-      border-radius: 16px;
-      padding: 2rem;
-      transition: background 0.3s, transform 0.3s;
+    /* Prayer for every need */
+    .needs-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; flex-wrap: wrap; }
+    .needs-head .lede { max-width: 26rem; }
+    .needs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2.4vw, 2rem); margin-top: clamp(2.5rem, 5vw, 4rem); }
+    .need-card { display: flex; flex-direction: column; }
+    .need-card .frame { aspect-ratio: 4 / 5; }
+    .need-card .frame img { transition: transform 1.4s var(--ease); }
+    .need-card:hover .frame img { transform: scale(1.04); }
+    .need-card .tag { font-family: var(--serif); font-style: italic; color: var(--gold); font-size: 1.05rem; margin-top: 1.4rem; }
+    .need-card h3 { font-size: clamp(1.7rem, 2.4vw, 2.1rem); color: var(--deep); margin: 0.2rem 0 0.6rem; }
+    .need-card p { color: var(--ink-soft); font-size: 1rem; }
+
+    /* What to expect */
+    .expect { background: var(--paper-2); }
+    .steps { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: clamp(2.5rem, 5vw, 4rem); border-top: 1px solid var(--line); counter-reset: step; }
+    .steps li { padding: 2rem clamp(1rem, 2vw, 2rem) 0 0; position: relative; }
+    .steps li + li { padding-left: clamp(1rem, 2vw, 2rem); border-left: 1px solid var(--line); }
+    .steps li::before {
+      counter-increment: step; content: "0" counter(step);
+      display: block; font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--gold); margin-bottom: 1.25rem;
     }
+    .steps h3 { font-size: 1.6rem; color: var(--deep); margin-bottom: 0.6rem; }
+    .steps p { color: var(--ink-soft); font-size: 0.975rem; }
 
-    .detail-item:hover {
-      background: rgba(253, 251, 247, 0.1);
-      transform: translateY(-2px);
+    /* Scripture interlude */
+    .interlude { background: var(--deep); color: var(--paper); text-align: center; overflow: hidden; }
+    .interlude .rings { position: absolute; left: 50%; top: 50%; width: min(1100px, 160vw); aspect-ratio: 1; transform: translate(-50%, -50%); pointer-events: none; opacity: 0.5; }
+    .interlude .rings circle { fill: none; stroke: rgba(216, 194, 154, 0.22); stroke-width: 1; transform-origin: 50% 50%; animation: ripple 12s linear infinite; }
+    .interlude .rings circle:nth-child(2) { animation-delay: -3s; }
+    .interlude .rings circle:nth-child(3) { animation-delay: -6s; }
+    .interlude .rings circle:nth-child(4) { animation-delay: -9s; }
+    @keyframes ripple { from { transform: scale(0.15); opacity: 0; } 15% { opacity: 1; } to { transform: scale(1); opacity: 0; } }
+    .interlude blockquote {
+      position: relative; font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 4.6vw, 3.9rem); line-height: 1.15;
+      max-width: 54rem; margin: 0 auto; letter-spacing: -0.01em;
     }
+    .interlude blockquote em { color: var(--gold-soft); }
+    .interlude cite { position: relative; display: block; margin-top: 2rem; font-style: normal; font-size: 0.8rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-soft); }
 
-    .detail-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: rgba(201, 169, 110, 0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.25rem;
-      font-size: 1.1rem;
-      color: var(--gold-light);
+    /* Visit */
+    .visit-grid { display: grid; grid-template-columns: 5fr 6fr; gap: clamp(2.5rem, 6vw, 6rem); margin-top: clamp(2.5rem, 5vw, 4rem); align-items: start; }
+    .facts { list-style: none; border-top: 1px solid var(--line); }
+    .facts li { display: grid; grid-template-columns: 44px 1fr; gap: 1rem; padding: 1.35rem 0; border-bottom: 1px solid var(--line); }
+    .facts .ico { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--paper-2); color: var(--gold); }
+    .facts .ico svg { width: 20px; height: 20px; }
+    .facts h3 { font-family: var(--sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 0.3rem; }
+    .facts p { font-size: 1.05rem; color: var(--ink); }
+    .facts p .muted { color: var(--ink-soft); }
+    .visit-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+    .visit-media { display: grid; gap: 1rem; }
+    .map-frame { aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; background: var(--paper-2); border: 1px solid var(--line); }
+    .map-frame iframe { width: 100%; height: 100%; border: 0; display: block; filter: saturate(0.75) contrast(1.02); }
+    .church-card { display: grid; grid-template-columns: 140px 1fr; gap: 1.25rem; align-items: center; padding: 0.75rem; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+    .church-card .frame { aspect-ratio: 4 / 3; border-radius: 10px; }
+    .church-card p { font-size: 0.95rem; color: var(--ink-soft); line-height: 1.5; }
+    .church-card strong { display: block; font-family: var(--serif); font-size: 1.35rem; font-weight: 600; color: var(--deep); }
+
+    /* FAQ */
+    .faq { background: var(--paper-2); }
+    .faq-grid { display: grid; grid-template-columns: 4fr 7fr; gap: clamp(2.5rem, 6vw, 6rem); align-items: start; }
+    .faq-grid .lede { margin-top: 1.25rem; }
+    .faq-list { border-top: 1px solid var(--line); }
+    .faq-list details { border-bottom: 1px solid var(--line); }
+    .faq-list summary {
+      list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem;
+      padding: 1.4rem 0; font-family: var(--serif); font-size: clamp(1.3rem, 2vw, 1.6rem); font-weight: 500; color: var(--deep); line-height: 1.25;
     }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary .plus { position: relative; flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); transition: background 0.3s, border-color 0.3s, transform 0.5s var(--ease); }
+    .faq-list summary .plus::before, .faq-list summary .plus::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 1.5px; background: var(--deep); transform: translate(-50%, -50%); transition: transform 0.5s var(--ease); }
+    .faq-list summary .plus::after { transform: translate(-50%, -50%) rotate(90deg); }
+    .faq-list details[open] summary .plus { background: var(--deep); border-color: var(--deep); }
+    .faq-list details[open] summary .plus::before, .faq-list details[open] summary .plus::after { background: var(--paper); }
+    .faq-list details[open] summary .plus::after { transform: translate(-50%, -50%) rotate(0deg); }
+    .faq-list summary:hover .plus { border-color: var(--deep); }
+    .faq-answer { padding: 0 3.5rem 1.6rem 0; color: var(--ink-soft); }
+    .faq-answer a { color: var(--deep); text-underline-offset: 3px; }
 
-    .detail-item h4 {
-      font-size: 1.2rem;
-      color: var(--cream);
-      margin-bottom: 0.5rem;
-    }
+    /* Footer */
+    .site-footer { background: var(--deep); color: rgba(251, 248, 242, 0.75); padding: clamp(4rem, 8vw, 6.5rem) 0 2rem; }
+    .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 3rem; padding-bottom: 3.5rem; border-bottom: 1px solid rgba(251, 248, 242, 0.14); }
+    .footer-top .footer-brand { margin-top: 0; max-width: none; font-family: var(--serif); font-size: clamp(2.4rem, 4.5vw, 3.6rem); color: var(--paper); line-height: 1; }
+    .footer-brand em { color: var(--gold-soft); }
+    .footer-top p { margin-top: 1rem; max-width: 24rem; font-size: 0.975rem; }
+    .footer-top a { color: var(--paper); text-underline-offset: 3px; }
+    .footer-col h3 { font-family: var(--sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; display: grid; gap: 0.5rem; }
+    .footer-col a { text-decoration: none; opacity: 0.85; transition: opacity 0.3s; }
+    .footer-col a:hover { opacity: 1; text-decoration: underline; }
+    .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-top: 1.75rem; font-size: 0.85rem; color: rgba(251, 248, 242, 0.55); }
+    .footer-bottom a { color: inherit; }
 
-    .detail-item p {
-      font-size: 0.95rem;
-      color: rgba(253, 251, 247, 0.7);
-      line-height: 1.6;
-    }
+    /* Scroll reveal */
+    .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity 1.1s var(--ease), transform 1.1s var(--ease); }
+    .js .reveal.in { opacity: 1; transform: none; }
+    .js .reveal.d1 { transition-delay: 0.1s; } .js .reveal.d2 { transition-delay: 0.2s; } .js .reveal.d3 { transition-delay: 0.3s; }
+    .js .reveal-img { clip-path: inset(8% 8% 8% 8% round var(--radius)); transition: clip-path 1.5s var(--ease); }
+    .js .reveal-img img { transform: scale(1.12); transition: transform 1.8s var(--ease); }
+    .js .reveal-img.in { clip-path: inset(0 0 0 0 round var(--radius)); }
+    .js .reveal-img.in img { transform: scale(1); }
+    .js .need-card:hover .reveal-img.in img { transform: scale(1.04); }
 
-    .detail-item .highlight {
-      color: var(--gold-light);
-      font-weight: 500;
-    }
-
-    /* MAP */
-    .map-section {
-      background: var(--cream);
-      padding-bottom: 3rem;
-    }
-
-    .map-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 3rem;
-      align-items: start;
-      margin-top: 2rem;
-    }
-
-    .map-info h3 {
-      font-size: 1.75rem;
-      color: var(--deep-blue);
-      margin-bottom: 1.5rem;
-    }
-
-    .map-detail {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      align-items: flex-start;
-    }
-
-    .map-detail-icon {
-      width: 40px;
-      height: 40px;
-      min-width: 40px;
-      border-radius: 10px;
-      background: rgba(106, 155, 181, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--water);
-      font-size: 1rem;
-      margin-top: 2px;
-    }
-
-    .map-detail h4 {
-      font-size: 1rem;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 700;
-      color: var(--charcoal);
-      margin-bottom: 0.25rem;
-    }
-
-    .map-detail p {
-      font-size: 0.95rem;
-      color: var(--charcoal-light);
-      line-height: 1.6;
-    }
-
-    .map-embed {
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 8px 30px rgba(42, 37, 32, 0.08);
-      border: 1px solid rgba(42, 37, 32, 0.06);
-    }
-
-    .map-embed iframe {
-      display: block;
-      width: 100%;
-      height: 380px;
-      border: 0;
-    }
-
-    .btn-map {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-top: 0.5rem;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--water);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .btn-map:hover {
-      color: var(--deep-blue);
-    }
-
-    /* FULL-WIDTH IMAGE WITH QUOTE */
-    .quote-banner {
-      position: relative;
-      height: 450px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .quote-banner img {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-    }
-
-    .quote-banner::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(44, 74, 90, 0.65);
-      z-index: 1;
-    }
-
-    .quote-banner-content {
-      position: relative;
-      z-index: 2;
-      max-width: 700px;
-    }
-
-    .quote-banner blockquote {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.5rem, 3vw, 2.25rem);
-      font-style: italic;
-      font-weight: 400;
-      color: var(--cream);
-      line-height: 1.5;
-      margin-bottom: 1rem;
-    }
-
-    .quote-banner cite {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.9rem;
-      font-style: normal;
-      color: var(--gold-light);
-      letter-spacing: 0.05em;
-    }
-
-    /* AFFILIATION */
-    .affiliation {
-      background: var(--cream-dark);
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-
-    .affiliation p {
-      font-size: 1rem;
-      color: var(--charcoal-light);
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    .affiliation a {
-      color: var(--water);
-      font-weight: 500;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(106, 155, 181, 0.3);
-      transition: border-color 0.3s, color 0.3s;
-    }
-
-    .affiliation a:hover {
-      color: var(--deep-blue);
-      border-color: var(--deep-blue);
-    }
-
-    .affil-divider {
-      width: 40px;
-      height: 2px;
-      background: var(--gold);
-      margin: 0 auto 1.5rem;
-      border-radius: 1px;
-    }
-
-    /* FOOTER */
-    footer {
-      background: var(--charcoal);
-      color: rgba(253, 251, 247, 0.5);
-      text-align: center;
-      padding: 2.5rem 2rem;
-      font-size: 0.85rem;
-    }
-
-    footer .footer-brand {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--cream);
-      margin-bottom: 0.5rem;
-    }
-
-    /* MOBILE NAV */
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      width: 28px;
-      height: 20px;
-      position: relative;
-      z-index: 101;
-    }
-
-    .nav-toggle span {
-      display: block;
-      width: 100%;
-      height: 2px;
-      background: var(--charcoal);
-      border-radius: 1px;
-      transition: transform 0.3s, opacity 0.3s;
-      position: absolute;
-      left: 0;
-    }
-
-    .nav-toggle span:nth-child(1) { top: 0; }
-    .nav-toggle span:nth-child(2) { top: 9px; }
-    .nav-toggle span:nth-child(3) { top: 18px; }
-
-    .nav-toggle.active span:nth-child(1) { top: 9px; transform: rotate(45deg); }
-    .nav-toggle.active span:nth-child(2) { opacity: 0; }
-    .nav-toggle.active span:nth-child(3) { top: 9px; transform: rotate(-45deg); }
-
-    .ripple-line {
-      display: block;
-      width: 60px;
-      height: 3px;
-      margin: 0 auto 2rem;
-      border-radius: 2px;
-      background: linear-gradient(90deg, var(--water), var(--gold));
-      opacity: 0.5;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 1000px) {
-      .hero {
-        grid-template-columns: 1fr;
-        min-height: auto;
-      }
-
-      .hero-content {
-        padding: 8rem 2rem 3rem;
-        text-align: center;
-      }
-
-      .hero-sub {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero-image {
-        height: 50vh;
-        min-height: 300px;
-      }
-
-      .hero-image::after {
-        background: linear-gradient(to bottom, var(--cream) 0%, transparent 15%),
-                    linear-gradient(to top, rgba(44, 74, 90, 0.15) 0%, transparent 40%);
-      }
-
-      .story-grid,
-      .story-grid.reverse {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .story-grid.reverse .story-image {
-        order: 0;
-      }
-
-      .story-image {
-        height: 350px;
-      }
-
-      .story-text {
-        text-align: center;
-      }
-
-      .story-text .story-verse {
-        text-align: left;
-      }
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1024px) {
+      .steps { grid-template-columns: 1fr 1fr; }
+      .steps li:nth-child(3) { border-left: 0; padding-left: 0; }
+      .steps li:nth-child(n+3) { border-top: 1px solid var(--line); margin-top: 2rem; }
     }
 
     @media (max-width: 900px) {
-      .mv-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .map-wrapper {
-        grid-template-columns: 1fr;
-      }
-
-      .map-embed iframe {
-        height: 300px;
-      }
-
-      .image-break {
-        height: 260px;
-      }
-
-      .quote-banner {
-        height: 360px;
-      }
+      .nav-links { display: none; }
+      .menu-btn { display: block; }
+      .story-grid, .visit-grid, .faq-grid { grid-template-columns: 1fr; }
+      .story-media { max-width: 520px; }
+      .mv-grid { grid-template-columns: 1fr; }
+      .needs-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .need-card .frame { aspect-ratio: 4 / 3; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .footer-top > div:first-child { grid-column: 1 / -1; }
     }
 
     @media (max-width: 700px) {
-      .nav-toggle {
-        display: block;
-      }
-
-      .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 280px;
-        height: 100vh;
-        background: var(--cream);
-        flex-direction: column;
-        padding: 5rem 2rem 2rem;
-        gap: 1.5rem;
-        transition: right 0.3s ease;
-        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
-      }
-
-      .nav-links.open {
-        right: 0;
-      }
-
-      .pillars-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .details-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      section {
-        padding: 4rem 1.25rem;
-      }
-
-      .mv-card {
-        padding: 2rem;
-      }
-
-      .image-break {
-        grid-template-columns: 1fr;
-        height: auto;
-      }
-
-      .image-break-item {
-        height: 220px;
-      }
-
-      .image-break-item:nth-child(2),
-      .image-break-item:nth-child(3) {
-        display: none;
-      }
+      body { font-size: 1rem; }
+      .hero { display: block; min-height: 0; padding: 0 0 3.5rem; }
+      .hero-media { position: relative; inset: auto; height: 50svh; min-height: 320px; overflow: hidden; }
+      .hero-media img { height: 100%; object-position: 62% 60%; }
+      .hero::after { display: none; }
+      .hero-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, var(--paper) 0%, rgba(251, 248, 242, 0.6) 22%, rgba(251, 248, 242, 0) 48%), linear-gradient(180deg, rgba(251, 248, 242, 0.7) 0%, rgba(251, 248, 242, 0) 22%); }
+      .hero-inner { position: relative; margin-top: -3.25rem; }
+      .hero h1 { margin: 1.1rem 0 1.25rem; }
+      .hero-meta { flex-direction: column; gap: 0.5rem; margin: 1.25rem 0 1.75rem; }
+      .hero-actions .btn { flex: 1 1 100%; }
+      .scroll-cue { display: none; }
+      .steps { grid-template-columns: 1fr; }
+      .steps li, .steps li + li { border-left: 0; padding: 1.75rem 0; margin-top: 0; }
+      .steps li + li { border-top: 1px solid var(--line); }
+      .visit-actions .btn { flex: 1 1 100%; }
+      .church-card { grid-template-columns: 96px 1fr; gap: 1rem; }
+      .faq-answer { padding-right: 0; }
+      .footer-top { grid-template-columns: 1fr; gap: 2.25rem; }
     }
 
-    @media (max-width: 480px) {
-      .details-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-content {
-        padding: 7rem 1.25rem 2rem;
-      }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+      .intro { opacity: 1; transform: none; }
+      .js .reveal, .js .reveal-img, .js .reveal-img img { opacity: 1; transform: none; clip-path: none; }
+      .interlude .rings { display: none; }
     }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav role="navigation" aria-label="Main navigation">
-    <a href="#" class="nav-brand">Wells of Healing</a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links">
-      <li><a href="#mission">About</a></li>
-      <li><a href="#pillars">Vision</a></li>
-      <li><a href="#details">Visit</a></li>
-      <li><a href="#location">Location</a></li>
-      <li><a href="#details" class="nav-cta">Get Prayer</a></li>
+  <script>document.documentElement.classList.add('js'); document.body.classList.add('js');</script>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Main">
+      <a href="#top" class="brand" aria-label="Wells of Healing — home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C16 3 6 14.5 6 20.5 6 26 10.5 30 16 30s10-4 10-9.5C26 14.5 16 3 16 3Z" fill="#1F4152"/><path d="M10.5 21.5c1.8 1.4 3.6 2 5.5 2s3.7-.6 5.5-2" stroke="#D8C29A" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg>
+        <span>Wells of Healing</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#prayer">Prayer</a></li>
+        <li><a href="#expect">What to Expect</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#visit" class="btn btn-primary">Plan Your Visit</a></li>
+      </ul>
+      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <ul>
+      <li><a href="#about">About <small>01</small></a></li>
+      <li><a href="#prayer">Prayer <small>02</small></a></li>
+      <li><a href="#expect">What to Expect <small>03</small></a></li>
+      <li><a href="#visit">Visit <small>04</small></a></li>
+      <li><a href="#faq">FAQ <small>05</small></a></li>
     </ul>
-  </nav>
-
-  <!-- Hero — split layout with editorial image -->
-  <section class="hero" id="hero">
-    <div class="hero-content">
-      <div class="closure-notice" role="note" data-expires="2027-01-01">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="10" y1="14" x2="14" y2="18"/><line x1="14" y1="14" x2="10" y2="18"/></svg>
-        <p><strong>Holiday Closure</strong>The healing room will be closed on Thursday, Dec.&nbsp;24 and Thursday, Dec.&nbsp;31. We&rsquo;ll resume Thursday, Jan.&nbsp;7. Merry Christmas &amp; Happy New Year!</p>
-      </div>
-      <div class="hero-label reveal">In-Person Prayer Rooms</div>
-      <h1 class="reveal reveal-delay-1">Wells of <em>Healing</em></h1>
-      <p class="hero-sub reveal reveal-delay-2">Hosting the Presence of Jesus, our Healer.<br>Every Thursday evening in Richmond, BC.</p>
-      <a href="#details" class="btn-primary reveal reveal-delay-3">Visit Us</a>
-    </div>
-    <div class="hero-image">
-      <img
-        src="images/water.webp"
-        alt="Calm peaceful water"
-        loading="eager"
-      >
-    </div>
-  </section>
-
-  <!-- Mission & Vision -->
-  <section class="mission-vision" id="mission">
-    <div class="container">
-      <div class="section-label reveal">Who We Are</div>
-      <span class="ripple-line reveal" style="margin-left:0;"></span>
-      <div class="mv-grid">
-        <div class="mv-card reveal">
-          <div class="mv-icon">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-          </div>
-          <h3>Our Mission</h3>
-          <p>Healing Rooms host the Presence of Jesus, our Healer, to see people healed, set free, to live a life the Lord has planned for them demonstrating the Kingdom of God.</p>
-        </div>
-        <div class="mv-card reveal reveal-delay-1">
-          <div class="mv-icon">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-          </div>
-          <h3>Our Vision</h3>
-          <p>A loving, and safe environment where people of all walks, receive prayer for physical, mental, and emotional afflictions. We follow the examples of Jesus Christ, who is featured in the Bible, who is the same yesterday today and forever.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Editorial image strip -->
-  <div class="image-break">
-    <div class="image-break-item">
-      <img
-        src="images/fraserview.jpeg"
-        alt="Fraserview M.B. Church in Vancouver"
-        loading="lazy"
-      >
-    </div>
-    <div class="image-break-item">
-      <img
-        src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&h=400&fit=crop"
-        alt="Family walking together in warm light"
-        loading="lazy"
-      >
-    </div>
-    <div class="image-break-item">
-      <img
-        src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=600&h=400&fit=crop"
-        alt="Open Bible with warm light"
-        loading="lazy"
-      >
+    <div class="mobile-menu-foot">
+      <strong>Every Thursday &middot; 7:00&ndash;8:30 PM</strong>
+      Room 104, 11295 Mellis Drive, Richmond, BC
+      <a href="https://maps.app.goo.gl/rnTJjTPMU88ziMQG7" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Get Directions</a>
     </div>
   </div>
 
-  <!-- Story section — editorial image + text -->
-  <section class="story">
-    <div class="container">
-      <div class="story-grid">
-        <div class="story-image reveal">
-          <img
-            src="images/jesus-hands.jpg"
-            alt="Jesus with outstretched hands"
-            loading="lazy"
-          >
-        </div>
-        <div class="story-text reveal reveal-delay-1">
-          <div class="section-label">A Place of Encounter</div>
-          <h3>Where People Meet the Healer</h3>
-          <p>Every Thursday evening, our trained prayer teams welcome people from all walks of life &mdash; no matter their background, belief, or burden. Whether you're carrying physical pain, emotional weight, or mental distress, you are welcomed here.</p>
-          <p>We believe that Jesus is the same yesterday, today, and forever &mdash; and His compassion still moves to heal.</p>
-          <div class="story-verse">
-            &ldquo;He heals the brokenhearted and binds up their wounds.&rdquo;<br>
-            <small>&mdash; Psalm 147:3</small>
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <picture>
+          <source type="image/webp"
+                  srcset="/images/hero-still-water-828.webp 828w, /images/hero-still-water-1280.webp 1280w, /images/hero-still-water-1920.webp 1920w, /images/hero-still-water-2752.webp 2752w"
+                  sizes="100vw">
+          <img src="/images/hero-still-water-1920.webp" width="2752" height="1536" alt="Still water at dawn with a single ripple spreading in soft golden light" fetchpriority="high" decoding="async">
+        </picture>
+      </div>
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow intro intro-1">Healing Rooms &middot; Richmond, BC</p>
+          <h1 id="hero-title" class="intro intro-2">Wells of <em>Healing</em></h1>
+          <p class="hero-sub intro intro-3">Hosting the Presence of Jesus, our Healer. Free, in-person prayer for body, mind and heart.</p>
+          <ul class="hero-meta intro intro-4">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><strong>Every Thursday</strong> &middot; 7:00&ndash;8:30 PM</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg><span>Walk-ins welcome &middot; Always free</span></li>
+          </ul>
+          <div class="hero-actions intro intro-5">
+            <a href="#visit" class="btn btn-primary">Plan Your Visit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="https://maps.app.goo.gl/rnTJjTPMU88ziMQG7" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Get Directions</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+      <span class="scroll-cue" aria-hidden="true"></span>
+    </section>
 
-  <!-- Pillars — with images -->
-  <section class="pillars" id="pillars">
-    <div class="container" style="text-align:center;">
-      <div class="section-label reveal">Prayer For Every Need</div>
-      <h2 class="section-title reveal">Physical. Mental. Emotional.</h2>
-      <div class="pillars-grid">
-        <div class="pillar-card reveal">
-          <div class="pillar-card-image">
-            <img
-              src="images/prayerhands.avif"
-              alt="Hands joined together in prayer"
-              loading="lazy"
-            >
+    <!-- Welcome / Mission & Vision -->
+    <section class="section welcome" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <p class="eyebrow reveal">Who We Are</p>
+        <h2 id="about-title" class="welcome-statement reveal d1">A quiet, loving place where people of every walk of life can <em>receive prayer</em> &mdash; and meet Jesus, the same yesterday, today and forever.</h2>
+        <div class="mv-grid">
+          <div class="mv-item reveal">
+            <span class="num">i.</span>
+            <h3>Our Mission</h3>
+            <p>Healing Rooms host the Presence of Jesus, our Healer, to see people healed, set free, to live a life the Lord has planned for them demonstrating the Kingdom of God.</p>
           </div>
-          <div class="pillar-card-body">
-            <h4>Physical Healing</h4>
+          <div class="mv-item reveal d1">
+            <span class="num">ii.</span>
+            <h3>Our Vision</h3>
+            <p>A loving and safe environment where people of all walks receive prayer for physical, mental, and emotional afflictions. We follow the example of Jesus Christ, featured in the Bible, who is the same yesterday, today and forever.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="section story" aria-labelledby="story-title">
+      <div class="wrap story-grid">
+        <div class="frame story-media reveal-img" data-parallax>
+          <img src="/images/open-bible-window-1200.webp"
+               srcset="/images/open-bible-window-800.webp 800w, /images/open-bible-window-1200.webp 1200w, /images/open-bible-window-1600.webp 1600w"
+               sizes="(max-width: 900px) 92vw, 42vw" width="1600" height="1986" loading="lazy" decoding="async"
+               alt="An open Bible on a wooden table beside a sunlit window">
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow reveal">A Place of Encounter</p>
+          <h2 id="story-title" class="h2 reveal d1">Where people meet <em>the Healer</em></h2>
+          <p class="reveal d2">Every Thursday evening, our trained prayer teams welcome people from all walks of life &mdash; no matter their background, belief, or burden. Whether you&rsquo;re carrying physical pain, emotional weight, or mental distress, you are welcome here.</p>
+          <p class="reveal d2">We believe that Jesus is the same yesterday, today, and forever &mdash; and His compassion still moves to heal.</p>
+          <blockquote class="verse reveal d3">&ldquo;He heals the brokenhearted and binds up their wounds.&rdquo;<cite>Psalm 147:3</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prayer for every need -->
+    <section class="section needs" id="prayer" aria-labelledby="prayer-title">
+      <div class="wrap">
+        <div class="needs-head">
+          <div>
+            <p class="eyebrow reveal">Prayer for Every Need</p>
+            <h2 id="prayer-title" class="h2 reveal d1">Physical. Mental. <em>Emotional.</em></h2>
+          </div>
+          <p class="lede reveal d2">Whatever you&rsquo;re carrying, you don&rsquo;t have to carry it alone. Come and receive prayer &mdash; there&rsquo;s nothing you need to prepare.</p>
+        </div>
+        <div class="needs-grid">
+          <article class="need-card reveal">
+            <div class="frame reveal-img">
+              <img src="/images/prayer-hands-900.webp"
+                   srcset="/images/prayer-hands-600.webp 600w, /images/prayer-hands-900.webp 900w, /images/prayer-hands-1400.webp 1400w"
+                   sizes="(max-width: 900px) 92vw, 30vw" width="1400" height="1045" loading="lazy" decoding="async"
+                   alt="Weathered hands gently folded in prayer in soft window light">
+            </div>
+            <p class="tag">for the body</p>
+            <h3>Physical Healing</h3>
             <p>Receive prayer for pain, illness, injury, and physical conditions of every kind.</p>
-          </div>
-        </div>
-        <div class="pillar-card reveal reveal-delay-1">
-          <div class="pillar-card-image">
-            <img
-              src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=500&h=350&fit=crop"
-              alt="Calm ocean scene representing mental peace"
-              loading="lazy"
-            >
-          </div>
-          <div class="pillar-card-body">
-            <h4>Mental Wellness</h4>
+          </article>
+          <article class="need-card reveal d1">
+            <div class="frame reveal-img">
+              <img src="/images/misty-lake-900.webp"
+                   srcset="/images/misty-lake-600.webp 600w, /images/misty-lake-900.webp 900w, /images/misty-lake-1400.webp 1400w"
+                   sizes="(max-width: 900px) 92vw, 30vw" width="1400" height="1045" loading="lazy" decoding="async"
+                   alt="A calm, misty lake at sunrise reflecting a soft pastel sky">
+            </div>
+            <p class="tag">for the mind</p>
+            <h3>Mental Wellness</h3>
             <p>Find peace and clarity through prayer for anxiety, depression, and mental burdens.</p>
-          </div>
-        </div>
-        <div class="pillar-card reveal reveal-delay-2">
-          <div class="pillar-card-image">
-            <img
-              src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=500&h=350&fit=crop"
-              alt="People embracing and supporting one another"
-              loading="lazy"
-            >
-          </div>
-          <div class="pillar-card-body">
-            <h4>Emotional Freedom</h4>
+          </article>
+          <article class="need-card reveal d2">
+            <div class="frame reveal-img">
+              <img src="/images/hands-comfort-900.webp"
+                   srcset="/images/hands-comfort-600.webp 600w, /images/hands-comfort-900.webp 900w, /images/hands-comfort-1400.webp 1400w"
+                   sizes="(max-width: 900px) 92vw, 30vw" width="1400" height="1045" loading="lazy" decoding="async"
+                   alt="One hand gently holding another in comfort">
+            </div>
+            <p class="tag">for the heart</p>
+            <h3>Emotional Freedom</h3>
             <p>Experience breakthrough from grief, trauma, fear, and emotional wounds through compassionate prayer.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- What to expect -->
+    <section class="section expect" id="expect" aria-labelledby="expect-title">
+      <div class="wrap">
+        <p class="eyebrow reveal">Your First Visit</p>
+        <h2 id="expect-title" class="h2 reveal d1">What to <em>expect</em></h2>
+        <ol class="steps">
+          <li class="reveal">
+            <h3>Arrive</h3>
+            <p>Come any Thursday between 7:00 and 8:30 PM. Enter through the back door of Fraserview MB Church and find Room 104.</p>
+          </li>
+          <li class="reveal d1">
+            <h3>Be welcomed</h3>
+            <p>No appointment, no cost, no need to explain yourself. Come as you are &mdash; you&rsquo;ll be warmly received.</p>
+          </li>
+          <li class="reveal d2">
+            <h3>Receive prayer</h3>
+            <p>A trained prayer team will pray with you personally for whatever you&rsquo;re carrying &mdash; body, mind or heart.</p>
+          </li>
+          <li class="reveal d3">
+            <h3>Go in peace</h3>
+            <p>Leave refreshed, and come back any Thursday. Freely we have received, freely we give.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Scripture interlude -->
+    <section class="section interlude" aria-label="Scripture">
+      <svg class="rings" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="49"/><circle cx="50" cy="50" r="49"/><circle cx="50" cy="50" r="49"/><circle cx="50" cy="50" r="49"/></svg>
+      <div class="wrap">
+        <blockquote class="reveal">&ldquo;Come to me, all you who are weary and burdened, and <em>I will give you rest.</em>&rdquo;</blockquote>
+        <cite class="reveal d1">Matthew 11:28</cite>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section class="section visit" id="visit" aria-labelledby="visit-title">
+      <div class="wrap">
+        <p class="eyebrow reveal">Plan Your Visit</p>
+        <h2 id="visit-title" class="h2 reveal d1">Everything you <em>need to know</em></h2>
+        <p class="lede reveal d2" style="margin-top:1.25rem">We provide a safe, loving environment for everyone seeking prayer. No appointment, no cost &mdash; just come as you are.</p>
+
+        <div class="visit-grid">
+          <div>
+            <ul class="facts reveal">
+              <li>
+                <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+                <div><h3>When</h3><p>Every Thursday<br><span class="muted">7:00 PM &ndash; 8:30 PM</span></p></div>
+              </li>
+              <li>
+                <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3.1-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+                <div><h3>Where</h3><p>Room 104, 11295 Mellis Drive<br><span class="muted">Richmond, BC V6X 2R7 &middot; Fraserview MB Church</span></p></div>
+              </li>
+              <li>
+                <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M6 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17"/><path d="M14 12h.01"/></svg></span>
+                <div><h3>Entrance</h3><p>Enter through the back door<br><span class="muted">The same entrance as the Canadian Star Secondary School.</span></p></div>
+              </li>
+              <li>
+                <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+                <div><h3>Walk-ins &middot; Free</h3><p>No appointment necessary<br><span class="muted">Freely we have received, freely we give.</span></p></div>
+              </li>
+            </ul>
+            <div class="closure-notice" role="note" data-expires="2027-01-01">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="10" y1="14" x2="14" y2="18"/><line x1="14" y1="14" x2="10" y2="18"/></svg>
+              <p><strong>Holiday Closure</strong>The healing room will be closed on Thursday, Dec.&nbsp;24 and Thursday, Dec.&nbsp;31. We&rsquo;ll resume Thursday, Jan.&nbsp;7. Merry Christmas &amp; Happy New Year!</p>
+            </div>
+            <div class="visit-actions reveal">
+              <a href="https://maps.app.goo.gl/rnTJjTPMU88ziMQG7" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Open in Google Maps <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="/wells-of-healing.ics" class="btn btn-ghost" download>Add to Calendar</a>
+            </div>
+          </div>
+
+          <div class="visit-media reveal d1">
+            <div class="map-frame">
+              <iframe
+                src="https://www.google.com/maps?q=Fraserview+MB+Church+Richmond+BC&output=embed"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Map showing Fraserview MB Church, 11295 Mellis Drive, Richmond BC"></iframe>
+            </div>
+            <div class="church-card">
+              <div class="frame">
+                <img src="/images/fraserview-church-480.webp" srcset="/images/fraserview-church-480.webp 480w, /images/fraserview-church-960.webp 960w" sizes="140px"
+                     width="960" height="720" loading="lazy" decoding="async" alt="Fraserview MB Church building in Richmond, BC">
+              </div>
+              <p><strong>Fraserview MB Church</strong>Look for Room 104 once you&rsquo;re inside the back entrance.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Quote banner with background image -->
-  <div class="quote-banner">
-    <img
-      src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1400&h=600&fit=crop&crop=bottom"
-      alt="Calm water at golden hour"
-      loading="lazy"
-    >
-    <div class="quote-banner-content reveal">
-      <blockquote>&ldquo;Come to me, all you who are weary and burdened, and I will give you rest.&rdquo;</blockquote>
-      <cite>Matthew 11:28</cite>
-    </div>
-  </div>
-
-  <!-- Details -->
-  <section class="details" id="details">
-    <div class="container">
-      <div class="section-label reveal">Plan Your Visit</div>
-      <h2 class="section-title reveal">Everything You Need to Know</h2>
-      <p class="details-subtitle reveal">We provide a safe, loving environment for everyone seeking prayer. No appointment, no cost &mdash; just come as you are.</p>
-      <div class="closure-notice" role="note" data-expires="2027-01-01">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="10" y1="14" x2="14" y2="18"/><line x1="14" y1="14" x2="10" y2="18"/></svg>
-        <p><strong>Holiday Closure</strong>The healing room will be closed on Thursday, Dec.&nbsp;24 and Thursday, Dec.&nbsp;31. We&rsquo;ll resume Thursday, Jan.&nbsp;7. Merry Christmas &amp; Happy New Year!</p>
-      </div>
-      <div class="details-grid">
-        <div class="detail-item reveal">
-          <div class="detail-icon">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="9"/><polyline points="10 5 10 10 14 12"/></svg>
-          </div>
-          <h4>When</h4>
-          <p><span class="highlight">Every Thursday</span><br>7:00 PM &ndash; 8:30 PM</p>
+    <!-- FAQ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq-grid">
+        <div>
+          <p class="eyebrow reveal">Questions</p>
+          <h2 id="faq-title" class="h2 reveal d1">Frequently <em>asked</em></h2>
+          <p class="lede reveal d2">New to healing rooms? Here are answers to the questions people ask most before their first visit.</p>
         </div>
-        <div class="detail-item reveal reveal-delay-1">
-          <div class="detail-icon">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/><path d="M9 9h.01"/><path d="M15 9h.01"/></svg>
-          </div>
-          <h4>Where</h4>
-          <p>Room 104<br><span class="highlight">11295 Mellis Drive</span><br>Richmond, BC</p>
-        </div>
-        <div class="detail-item reveal reveal-delay-2">
-          <div class="detail-icon">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="14" height="14" rx="2"/><line x1="3" y1="8" x2="17" y2="8"/><line x1="7" y1="2" x2="7" y2="6"/><line x1="13" y1="2" x2="13" y2="6"/></svg>
-          </div>
-          <h4>No Appointment</h4>
-          <p>Walk-ins only.<br>All walks of life are welcome.</p>
-        </div>
-        <div class="detail-item reveal reveal-delay-3">
-          <div class="detail-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <h4>Free of Charge</h4>
-          <p>Freely we have received,<br>freely we give.</p>
+        <div class="faq-list reveal">
+          <details>
+            <summary>When is Wells of Healing open? <span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>Every Thursday evening from 7:00 to 8:30 PM in Room 104 at 11295 Mellis Drive, Richmond, BC (Fraserview MB Church).</p></div>
+          </details>
+          <details>
+            <summary>Do I need an appointment? <span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>No. We&rsquo;re walk-in only &mdash; no appointment is necessary. Simply arrive any Thursday between 7:00 and 8:30 PM.</p></div>
+          </details>
+          <details>
+            <summary>Is there a cost for prayer? <span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>No. Prayer is always free of charge. Freely we have received, freely we give.</p></div>
+          </details>
+          <details>
+            <summary>Do I have to be a Christian or attend a church? <span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>No. People from all walks of life are welcome, no matter their background, belief, or burden. We provide a safe, loving environment for everyone seeking prayer.</p></div>
+          </details>
+          <details>
+            <summary>What can I receive prayer for? <span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>You can receive prayer for physical needs such as pain, illness, and injury; mental burdens such as anxiety and depression; and emotional wounds such as grief, trauma, and fear.</p></div>
+          </details>
+          <details>
+            <summary>What happens when I arrive? <span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>You&rsquo;ll be welcomed and a trained prayer team will pray with you personally, following the example of Jesus Christ, in a safe and loving environment. Come as you are.</p></div>
+          </details>
+          <details>
+            <summary>Which entrance do I use? <span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>Enter through the back door of Fraserview MB Church at 11295 Mellis Drive, Richmond &mdash; the same entrance as the Canadian Star Secondary School &mdash; and come to Room 104. <a href="https://maps.app.goo.gl/rnTJjTPMU88ziMQG7" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>.</p></div>
+          </details>
+          <details>
+            <summary>Is Wells of Healing part of a larger ministry? <span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>Yes. Wells of Healing is affiliated with the <a href="https://healingrooms.com" target="_blank" rel="noopener noreferrer">International Association of Healing Rooms (IAHR)</a>.</p></div>
+          </details>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Map / Location -->
-  <section class="map-section" id="location">
-    <div class="container">
-      <div class="section-label reveal">Where to Find Us</div>
-      <span class="ripple-line reveal" style="margin-left:0;"></span>
-      <div class="map-wrapper">
-        <div class="map-info reveal">
-          <h3>Visit Us in Richmond</h3>
-          <div class="map-detail">
-            <div class="map-detail-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-            </div>
-            <div>
-              <h4>Address</h4>
-              <p>Room 104, 11295 Mellis Drive<br>Richmond, BC</p>
-            </div>
-          </div>
-          <div class="map-detail">
-            <div class="map-detail-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/><path d="M12 11h.01"/><path d="M9 22V2"/></svg>
-            </div>
-            <div>
-              <h4>Entry Instructions</h4>
-              <p>Enter through the back door &mdash; the same entrance as the Canadian Star Secondary School.</p>
-            </div>
-          </div>
-          <a href="https://maps.app.goo.gl/rnTJjTPMU88ziMQG7" target="_blank" rel="noopener noreferrer" class="btn-map">
-            Open in Google Maps &rarr;
-          </a>
-        </div>
-        <div class="map-embed reveal reveal-delay-1">
-          <iframe
-            src="https://www.google.com/maps?q=Fraserview+MB+Church+Richmond+BC&output=embed"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Map showing 11295 Mellis Drive, Richmond BC"
-          ></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Affiliation -->
-  <section class="affiliation">
-    <div class="container reveal">
-      <div class="affil-divider"></div>
-      <p>Wells of Healing is proudly affiliated with the<br><a href="https://healingrooms.com" target="_blank" rel="noopener noreferrer">International Association of Healing Rooms (IAHR)</a>.</p>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-brand">Wells of Healing</div>
-    <p>Richmond, BC &middot; &copy; 2026</p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <p class="footer-brand">Wells of <em>Healing</em></p>
+          <p>Proudly affiliated with the <a href="https://healingrooms.com" target="_blank" rel="noopener noreferrer">International Association of Healing Rooms (IAHR)</a>.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Visit</h3>
+          <ul>
+            <li>Every Thursday, 7:00&ndash;8:30 PM</li>
+            <li>Room 104, 11295 Mellis Drive</li>
+            <li>Richmond, BC V6X 2R7</li>
+            <li><a href="https://maps.app.goo.gl/rnTJjTPMU88ziMQG7" target="_blank" rel="noopener noreferrer">Get directions &rarr;</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#prayer">Prayer</a></li>
+            <li><a href="#expect">What to Expect</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> Wells of Healing &middot; Richmond, BC</p>
+        <a href="#top">Back to top &uarr;</a>
+      </div>
+    </div>
   </footer>
 
-  <script>
-    // Scroll reveal
-    const revealElements = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-    revealElements.forEach(el => observer.observe(el));
-
-    // Nav scroll
-    const nav = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    // Mobile nav
-    const toggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      toggle.classList.toggle('active');
-      toggle.setAttribute('aria-expanded', isOpen);
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        toggle.classList.remove('active');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  </script>
-
-  <!-- Vercel Analytics -->
   <script>
     // Remove holiday notices once they expire (Pacific time)
     document.querySelectorAll('[data-expires]').forEach(function (el) {
       if (new Date() >= new Date(el.dataset.expires + 'T00:00:00-08:00')) el.remove();
     });
+
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var header = document.querySelector('.site-header');
+      var btn = document.querySelector('.menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Header state
+      var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 24); };
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      // Mobile menu
+      function setMenu(open) {
+        document.body.classList.toggle('menu-open', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+        btn.setAttribute('aria-expanded', String(open));
+        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        menu.setAttribute('aria-hidden', String(!open));
+        if (open) menu.querySelector('a').focus({ preventScroll: true });
+      }
+      btn.addEventListener('click', function () { setMenu(!document.body.classList.contains('menu-open')); });
+      menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && document.body.classList.contains('menu-open')) { setMenu(false); btn.focus(); }
+      });
+      window.matchMedia('(min-width: 901px)').addEventListener('change', function (m) { if (m.matches) setMenu(false); });
+
+      // Scroll reveal
+      var targets = document.querySelectorAll('.reveal, .reveal-img');
+      if (reduce || !('IntersectionObserver' in window)) {
+        targets.forEach(function (el) { el.classList.add('in'); });
+      } else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+        targets.forEach(function (el) { io.observe(el); });
+      }
+
+      // Gentle parallax (hero + story image)
+      if (!reduce) {
+        var heroImg = document.querySelector('.hero-media img');
+        var para = document.querySelector('[data-parallax] img');
+        var ticking = false;
+        var mobile = window.matchMedia('(max-width: 700px)');
+        var update = function () {
+          var y = window.scrollY;
+          if (y < window.innerHeight * 1.2 && !mobile.matches) heroImg.style.translate = '0 ' + (y * 0.18).toFixed(1) + 'px';
+          if (para) {
+            var r = para.parentElement.getBoundingClientRect();
+            if (r.bottom > 0 && r.top < window.innerHeight) {
+              var p = (r.top + r.height / 2 - window.innerHeight / 2) / window.innerHeight;
+              para.style.translate = '0 ' + Math.max(-7, Math.min(7, p * 12)).toFixed(2) + '%';
+            }
+          }
+          ticking = false;
+        };
+        window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+        update();
+      }
+    })();
   </script>
+
+  <!-- Vercel Web Analytics -->
   <script defer src="/_vercel/insights/script.js"></script>
   <!-- Vercel Speed Insights -->
   <script defer src="/_vercel/speed-insights/script.js"></script>
