@@ -43,6 +43,8 @@
         "image": "https://www.wellsofhealing.com/images/og-image.jpg",
         "description": "Christian healing rooms ministry offering free, in-person prayer for physical, mental, and emotional healing in Richmond, BC.",
         "slogan": "Hosting the Presence of Jesus, our Healer.",
+        "email": "wsofhealing@gmail.com",
+        "contactPoint": { "@type": "ContactPoint", "contactType": "general inquiries", "email": "wsofhealing@gmail.com" },
         "areaServed": ["Richmond, BC", "Vancouver, BC", "Metro Vancouver"],
         "memberOf": {
           "@type": "Organization",
@@ -465,6 +467,7 @@
     .facts h3 { font-family: var(--sans); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 0.3rem; }
     .facts p { font-size: 1.05rem; color: var(--ink); }
     .facts p .muted { color: var(--ink-soft); }
+    .facts p a { color: var(--deep); text-underline-offset: 3px; overflow-wrap: anywhere; }
     .visit-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
     .visit-media { display: grid; gap: 1rem; }
     .map-frame { aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; background: var(--paper-2); border: 1px solid var(--line); }
@@ -497,7 +500,7 @@
 
     /* Footer */
     .site-footer { background: var(--deep); color: rgba(251, 248, 242, 0.75); padding: clamp(4rem, 8vw, 6.5rem) 0 2rem; }
-    .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 3rem; padding-bottom: 3.5rem; border-bottom: 1px solid rgba(251, 248, 242, 0.14); }
+    .footer-top { display: grid; grid-template-columns: 1.25fr 1.25fr 0.75fr 1fr; gap: 2.5rem; padding-bottom: 3.5rem; border-bottom: 1px solid rgba(251, 248, 242, 0.14); }
     .footer-top .footer-brand { margin-top: 0; max-width: none; font-family: var(--serif); font-size: clamp(2.4rem, 4.5vw, 3.6rem); color: var(--paper); line-height: 1; }
     .footer-brand em { color: var(--gold-soft); }
     .footer-top p { margin-top: 1rem; max-width: 24rem; font-size: 0.975rem; }
@@ -534,7 +537,7 @@
       .mv-grid { grid-template-columns: 1fr; }
       .needs-grid { grid-template-columns: 1fr; gap: 3rem; }
       .need-card .frame { aspect-ratio: 4 / 3; }
-      .footer-top { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr 1fr; }
       .footer-top > div:first-child { grid-column: 1 / -1; }
     }
 
@@ -781,6 +784,10 @@
                 <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
                 <div><h3>Walk-ins &middot; Free</h3><p>No appointment necessary<br><span class="muted">Freely we have received, freely we give.</span></p></div>
               </li>
+              <li id="contact">
+                <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+                <div><h3>Contact</h3><p><a href="mailto:wsofhealing@gmail.com">wsofhealing@gmail.com</a><br><span class="muted">Questions or prayer requests &mdash; we&rsquo;d love to hear from you.</span></p></div>
+              </li>
             </ul>
             <div class="closure-notice" role="note" data-expires="2027-01-01">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="10" y1="14" x2="14" y2="18"/><line x1="14" y1="14" x2="10" y2="18"/></svg>
@@ -883,6 +890,12 @@
             <li><a href="#prayer">Prayer</a></li>
             <li><a href="#expect">What to Expect</a></li>
             <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:wsofhealing@gmail.com">wsofhealing@gmail.com</a></li>
           </ul>
         </div>
       </div>
