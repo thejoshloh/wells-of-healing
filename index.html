@@ -321,6 +321,7 @@
     .menu-open .mobile-menu li:nth-child(3) a { transition-delay: 0.1s; }
     .menu-open .mobile-menu li:nth-child(4) a { transition-delay: 0.15s; }
     .menu-open .mobile-menu li:nth-child(5) a { transition-delay: 0.2s; }
+    .menu-open .mobile-menu li:nth-child(6) a { transition-delay: 0.25s; }
     .mobile-menu-foot { font-size: 0.95rem; color: var(--ink-soft); }
     .mobile-menu-foot strong { color: var(--ink); font-weight: 600; display: block; }
     .mobile-menu-foot .btn { width: 100%; margin-top: 1.25rem; }
@@ -443,6 +444,34 @@
     .steps h3 { font-size: 1.6rem; color: var(--deep); margin-bottom: 0.6rem; }
     .steps p { color: var(--ink-soft); font-size: 0.975rem; }
 
+    /* Testimonies carousel */
+    .testi-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; flex-wrap: wrap; }
+    .testi-controls { display: flex; gap: 0.6rem; }
+    .testi-btn {
+      width: 52px; height: 52px; border-radius: 50%; border: 1px solid rgba(29, 42, 51, 0.25); background: transparent; color: var(--deep);
+      display: grid; place-items: center; cursor: pointer; transition: background 0.35s var(--ease), color 0.35s var(--ease), border-color 0.35s;
+    }
+    .testi-btn:hover { background: var(--deep); color: var(--paper); border-color: var(--deep); }
+    .testi-btn svg { width: 18px; height: 18px; }
+    .testi-viewport { overflow: hidden; margin-top: clamp(2.5rem, 5vw, 4rem); }
+    .testi-track { --per: 2; --gap: clamp(1rem, 2.4vw, 2rem); display: flex; gap: var(--gap); list-style: none; transition: transform 0.9s var(--ease); will-change: transform; }
+    .testi-card {
+      flex: 0 0 calc((100% - (var(--per) - 1) * var(--gap)) / var(--per));
+      display: flex;
+      padding: clamp(1.75rem, 3.5vw, 3rem); border: 1px solid var(--line); border-radius: var(--radius); background: #fff;
+    }
+    .testi-card figure { flex: 1; display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; }
+    .testi-card .mark { font-family: var(--serif); font-size: 4.5rem; line-height: 0.6; color: var(--gold-soft); height: 1.6rem; display: block; }
+    .testi-card blockquote p { font-family: var(--serif); font-size: clamp(1.3rem, 1.9vw, 1.6rem); line-height: 1.4; color: var(--deep); margin-top: 1rem; }
+    .testi-card figcaption { display: flex; align-items: center; gap: 0.9rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+    .testi-card .avatar { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--paper-2); color: var(--gold); font-family: var(--serif); font-size: 1.3rem; font-weight: 600; }
+    .testi-card .who strong { display: block; font-weight: 600; color: var(--ink); line-height: 1.3; }
+    .testi-card .who span { font-size: 0.85rem; color: var(--ink-mute); }
+    .testi-dots { display: flex; justify-content: center; gap: 0.35rem; margin-top: 2rem; }
+    .testi-dots button { width: 28px; height: 28px; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
+    .testi-dots button::before { content: ""; width: 8px; height: 8px; border-radius: 999px; background: rgba(29, 42, 51, 0.2); transition: width 0.45s var(--ease), background 0.3s; }
+    .testi-dots button[aria-current="true"]::before { width: 22px; background: var(--gold); }
+
     /* Scripture interlude */
     .interlude { background: var(--deep); color: var(--paper); text-align: center; overflow: hidden; }
     .interlude .rings { position: absolute; left: 50%; top: 50%; width: min(1100px, 160vw); aspect-ratio: 1; transform: translate(-50%, -50%); pointer-events: none; opacity: 0.5; }
@@ -559,6 +588,8 @@
       .visit-actions .btn { flex: 1 1 100%; }
       .church-card { grid-template-columns: 96px 1fr; gap: 1rem; }
       .faq-answer { padding-right: 0; }
+      .testi-track { --per: 1; }
+      .testi-controls { display: none; }
       .footer-top { grid-template-columns: 1fr; gap: 2.25rem; }
     }
 
@@ -597,8 +628,9 @@
       <li><a href="#about">About <small>01</small></a></li>
       <li><a href="#prayer">Prayer <small>02</small></a></li>
       <li><a href="#expect">What to Expect <small>03</small></a></li>
-      <li><a href="#visit">Visit <small>04</small></a></li>
-      <li><a href="#faq">FAQ <small>05</small></a></li>
+      <li><a href="#testimonies">Testimonies <small>04</small></a></li>
+      <li><a href="#visit">Visit <small>05</small></a></li>
+      <li><a href="#faq">FAQ <small>06</small></a></li>
     </ul>
     <div class="mobile-menu-foot">
       <strong>Every Thursday &middot; 7:00&ndash;8:30 PM</strong>
@@ -749,6 +781,71 @@
       </div>
     </section>
 
+    <!-- Testimonies -->
+    <section class="section testimonies" id="testimonies" aria-labelledby="testi-title">
+      <div class="wrap">
+        <div class="testi-head">
+          <div>
+            <p class="eyebrow reveal">Testimonies of Volunteers</p>
+            <h2 id="testi-title" class="h2 reveal d1">Why we <em>pray</em></h2>
+          </div>
+          <div class="testi-controls reveal d2">
+            <button class="testi-btn" type="button" data-dir="-1" aria-label="Previous testimony"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+            <button class="testi-btn" type="button" data-dir="1" aria-label="Next testimony"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          </div>
+        </div>
+        <div class="testi-carousel reveal" role="region" aria-roledescription="carousel" aria-label="Volunteer testimonies">
+          <div class="testi-viewport">
+            <ul class="testi-track" aria-live="off">
+            <li class="testi-card" role="group" aria-roledescription="slide" aria-label="1 of 7">
+              <figure>
+                <blockquote><span class="mark" aria-hidden="true">&ldquo;</span><p>When I gave my life to Jesus, he replaced my anger with his love. Jesus who loves, heals and sets free in the Bible hasn&rsquo;t changed, but many don&rsquo;t know he exists. Healing rooms is changing that, one person at a time.</p></blockquote>
+                <figcaption><span class="avatar" aria-hidden="true">I</span><span class="who"><strong>Ian</strong><span>Volunteer</span></span></figcaption>
+              </figure>
+            </li>
+            <li class="testi-card" role="group" aria-roledescription="slide" aria-label="2 of 7">
+              <figure>
+                <blockquote><span class="mark" aria-hidden="true">&ldquo;</span><p>Since joining Wells of Healing in Richmond, I am so glad for all God has taught me about prayer. I have also been amazed at God&rsquo;s help and guidance as He leads us in all the details each evening we meet to pray over each other and our guests.</p></blockquote>
+                <figcaption><span class="avatar" aria-hidden="true">M</span><span class="who"><strong>Michael</strong><span>Volunteer</span></span></figcaption>
+              </figure>
+            </li>
+            <li class="testi-card" role="group" aria-roledescription="slide" aria-label="3 of 7">
+              <figure>
+                <blockquote><span class="mark" aria-hidden="true">&ldquo;</span><p>I have personally experienced God&rsquo;s healing and deliverance through prayer in the name of Jesus. I am grateful for what He has done in my life, and I want others to experience the same love, freedom, and healing. That is why I volunteer at the Healing Room.</p></blockquote>
+                <figcaption><span class="avatar" aria-hidden="true">E</span><span class="who"><strong>Eiko</strong><span>Volunteer</span></span></figcaption>
+              </figure>
+            </li>
+            <li class="testi-card" role="group" aria-roledescription="slide" aria-label="4 of 7">
+              <figure>
+                <blockquote><span class="mark" aria-hidden="true">&ldquo;</span><p>I am Ruth, and I believe that Jesus Christ still heals today. He healed me from cancer, and I am now honored to serve as a volunteer at Wells of Healing, sharing the hope and love of Jesus with others.</p></blockquote>
+                <figcaption><span class="avatar" aria-hidden="true">R</span><span class="who"><strong>Ruth</strong><span>Volunteer</span></span></figcaption>
+              </figure>
+            </li>
+            <li class="testi-card" role="group" aria-roledescription="slide" aria-label="5 of 7">
+              <figure>
+                <blockquote><span class="mark" aria-hidden="true">&ldquo;</span><p>Having experienced God&rsquo;s healing in my own life and family, I desire to see others experience the healing and wholeness made possible through the death and resurrection of Jesus Christ. My heart is to see lives restored in His precious Name.</p></blockquote>
+                <figcaption><span class="avatar" aria-hidden="true">A</span><span class="who"><strong>Anne</strong><span>Volunteer</span></span></figcaption>
+              </figure>
+            </li>
+            <li class="testi-card" role="group" aria-roledescription="slide" aria-label="6 of 7">
+              <figure>
+                <blockquote><span class="mark" aria-hidden="true">&ldquo;</span><p>Ever since I was healed and set free I have had a deep desire to see others healed and set free as well.</p></blockquote>
+                <figcaption><span class="avatar" aria-hidden="true">J</span><span class="who"><strong>Joan</strong><span>Volunteer</span></span></figcaption>
+              </figure>
+            </li>
+            <li class="testi-card" role="group" aria-roledescription="slide" aria-label="7 of 7">
+              <figure>
+                <blockquote><span class="mark" aria-hidden="true">&ldquo;</span><p>I am passionate about seeing people walk in the abundant life of the Lord, just as I have experienced in my own life. This is what inspires and compels me to volunteer in the Healing Room.</p></blockquote>
+                <figcaption><span class="avatar" aria-hidden="true">S</span><span class="who"><strong>Su</strong><span>Volunteer</span></span></figcaption>
+              </figure>
+            </li>
+            </ul>
+          </div>
+          <div class="testi-dots" role="group" aria-label="Choose testimonies"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- Scripture interlude -->
     <section class="section interlude" aria-label="Scripture">
       <svg class="rings" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="49"/><circle cx="50" cy="50" r="49"/><circle cx="50" cy="50" r="49"/><circle cx="50" cy="50" r="49"/></svg>
@@ -889,6 +986,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#prayer">Prayer</a></li>
             <li><a href="#expect">What to Expect</a></li>
+            <li><a href="#testimonies">Testimonies</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
@@ -952,6 +1050,84 @@
         }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
         targets.forEach(function (el) { io.observe(el); });
       }
+
+      // Testimonies carousel
+      (function () {
+        var root = document.querySelector('.testi-carousel');
+        if (!root) return;
+        var track = root.querySelector('.testi-track');
+        var cards = track.children;
+        var dotsWrap = root.querySelector('.testi-dots');
+        var section = root.closest('section');
+        var index = 0, timer = null, paused = false, visible = false;
+        var DELAY = 7000;
+        var perView = function () { return parseInt(getComputedStyle(track).getPropertyValue('--per'), 10) || 1; };
+        var maxIndex = function () { return Math.max(0, cards.length - perView()); };
+
+        function buildDots() {
+          dotsWrap.innerHTML = '';
+          for (var i = 0; i <= maxIndex(); i++) {
+            var b = document.createElement('button');
+            b.type = 'button';
+            b.setAttribute('aria-label', 'Show testimony ' + (i + 1));
+            b.addEventListener('click', (function (n) { return function () { go(n); restart(); }; })(i));
+            dotsWrap.appendChild(b);
+          }
+        }
+        function go(n) {
+          var max = maxIndex();
+          index = n > max ? 0 : n < 0 ? max : n;
+          var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+          track.style.transform = 'translateX(' + (-index * (cards[0].offsetWidth + gap)) + 'px)';
+          var per = perView();
+          for (var i = 0; i < cards.length; i++) {
+            var shown = i >= index && i < index + per;
+            cards[i].setAttribute('aria-hidden', String(!shown));
+            cards[i].inert = !shown;
+          }
+          Array.prototype.forEach.call(dotsWrap.children, function (d, i) { d.setAttribute('aria-current', String(i === index)); });
+        }
+        function tick() { go(index + 1); }
+        function restart() {
+          clearInterval(timer); timer = null;
+          if (!reduce && !paused && visible && !document.hidden) timer = setInterval(tick, DELAY);
+        }
+
+        section.querySelectorAll('.testi-btn').forEach(function (b) {
+          b.addEventListener('click', function () { go(index + Number(b.dataset.dir)); restart(); });
+        });
+        [section].forEach(function (el) {
+          el.addEventListener('mouseenter', function () { paused = true; restart(); });
+          el.addEventListener('mouseleave', function () { paused = false; restart(); });
+          el.addEventListener('focusin', function () { paused = true; restart(); });
+          el.addEventListener('focusout', function (e) { if (!el.contains(e.relatedTarget)) { paused = false; restart(); } });
+        });
+
+        // Swipe
+        var x0 = null;
+        track.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; paused = true; restart(); }, { passive: true });
+        track.addEventListener('touchend', function (e) {
+          if (x0 !== null) {
+            var dx = e.changedTouches[0].clientX - x0;
+            if (Math.abs(dx) > 40) go(index + (dx < 0 ? 1 : -1));
+          }
+          x0 = null; paused = false; restart();
+        });
+
+        // Only rotate while on screen
+        if ('IntersectionObserver' in window) {
+          new IntersectionObserver(function (en) { visible = en[0].isIntersecting; restart(); }, { threshold: 0.3 }).observe(root);
+        } else { visible = true; }
+        document.addEventListener('visibilitychange', restart);
+
+        var lastPer = perView();
+        window.addEventListener('resize', function () {
+          if (perView() !== lastPer) { lastPer = perView(); buildDots(); }
+          go(Math.min(index, maxIndex()));
+        });
+
+        buildDots(); go(0); restart();
+      })();
 
       // Gentle parallax (hero + story image)
       if (!reduce) {
